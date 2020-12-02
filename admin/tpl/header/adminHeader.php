@@ -8,14 +8,14 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
 
     <!-- header css -->
-    <link rel="stylesheet" href="./css/destyle.css">
+    <!-- <link rel="stylesheet" href="./css/destyle.css"> -->
     <link rel="stylesheet" href="./css/adHeader.css">
     
     <!-- main css -->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
 
     <!-- footer css -->
-    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
     <title><?= $const["title"] ?></title>
 </head>
 

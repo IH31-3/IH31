@@ -4,9 +4,6 @@ header {
     background-color: #EAEAEA;
     box-shadow: 0 10px 25px 0 #82828280;
 }
-body{
-    background-origin: #F7F7F7;
-}
 
 header img {
     width: 160px;
@@ -28,36 +25,36 @@ header li, p {
     text-align: center;
 }
 
-#header-width {
+header #header-width {
     
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
-#logOut{
+header #logOut{
     background-color: #767676;
     color:#FFF;
     
 }
-#logOut a{
+header #logOut a{
     width: 250px;
     height: 80px;
     padding-top: 28px;
     display: block;
 }
 
-#logOut:hover{
+header #logOut:hover{
     opacity: 0.9;
 }
 
-ul li a{
+header ul li a{
     width: 250px;
     height: 80px;
     padding-top: 28px;
     display: block;
 }
-.mNav a:hover{
+header .mNav a:hover{
     background-color: #42A382;
     color: white;
     
