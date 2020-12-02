@@ -15,11 +15,23 @@ $footer = "tpl/footer/sample.php";
 // ---------- 処理分岐・画面差し替えエリア ----------
 // POST/GETの有無によって処理を分岐
 
+if(isset($_GET["switch_process_with_button_name"])){
+    $hoge = [
+        "ok" => "GETデータは取得できています。",
+    ];
+}
+
+if(isset($_POST["switch_process_post_data"])){
+    $fuga = [
+        "ok" => "POSTデータは取得できています。",
+    ];
+}
+
 if(isset($_POST["POST値"])){
     // テンプレート内で使う変数(配列)を準備
     $post_hoge = function_of_load_sample();
     // テンプレート差し替え
-    $main = "テンプレートを差し替える場合ここでパスを指定";
+    $main = "テンプレートを差し替える場合ここでパスを指定.php";
 }
 
 if(isset($_GET["GET値"])){
