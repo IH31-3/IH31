@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- reset css -->
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" href="./css/destyle.css">
 
     <!-- header css -->
-    <!-- <link rel="stylesheet" href="./css/destyle.css"> -->
     <link rel="stylesheet" href="./css/adHeader.css">
     
     <!-- main css -->
@@ -24,7 +23,7 @@
     <div id="header-width">
         <nav>
             <ul>
-                <li><a href=""><img src="<?= $const["path_to_logo_image"] ?>" alt="HALMORTOR" width="300px"></a></li>
+                <li><a href="./index.php"><img src="<?= $const["path_to_logo_image"] ?>" alt="HALMORTOR" width="300px"></a></li>
                 <li class="mNav"><a href=""><?= $const["regist"] ?></a></li>
                 <li class="mNav"><a href=""><?= $const["matter"] ?></a></li>
                 <li class="mNav"><a href=""><?= $const["change"] ?></a></li>

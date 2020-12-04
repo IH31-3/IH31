@@ -16,36 +16,16 @@ $footer = "tpl/footer/sample.php";
 // POST/GETの有無によって処理を分岐
 
 if(isset($_GET["switch_process_with_button_name"])){
-    $hoge = [
-        "ok" => "GETデータは取得できています。",
-    ];
+    // 配列にして送るのも良いと思います。
+    $hoge = get_check_sample($_GET["name"], $_GET["age"], $_GET["gender"], $_GET["address"]);
 }
 
 if(isset($_POST["switch_process_post_data"])){
-    $fuga = [
-        "ok" => "POSTデータは取得できています。",
-    ];
+    $fuga = post_check_sample($_POST["hobby"], $_POST["qualification"], $_POST["advantages"], $_POST["disadvantages"]);
 }
-
-if(isset($_POST["POST値"])){
-    // テンプレート内で使う変数(配列)を準備
-    $post_hoge = function_of_load_sample();
-    // テンプレート差し替え
-    $main = "テンプレートを差し替える場合ここでパスを指定.php";
-}
-
-if(isset($_GET["GET値"])){
-    // テンプレートで使う変数を準備
-    $get_hoge = function_of_load_sample2();
-    // テンプレート差し替え
-    $main = "adminHeaderじゃないテンプレート.php";
-}
-
 
 // ---------- html出力 ----------
 // 画面呼び出し
 require_once($header);
 require_once($main);
 require_once($footer);
-
-// もうフレームワーク使った方が早いやんって意見もわかります。笑

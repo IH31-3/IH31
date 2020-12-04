@@ -12,6 +12,25 @@ function load_page_source() {
     return $const;
 }
 
-function hogehoge($hikisuu) {
+function get_check_sample($name, $age, $gender, $address) {
 
+    $hoge = [
+        "ok" => "GETデータは取得できています。",
+        "name" => $name,
+        "age" => $age,
+        "gender" => $gender,
+        "address" => $address,
+    ];
+    return $hoge;
+}
+
+function post_check_sample($hobby, $qualification, $advantages, $disadvantages) {
+    $fuga = [
+        "ok" => "GETデータは取得できています。",
+        "hobby" => $hobby,
+        "qualification" => $qualification,
+        "advantages" => $advantages,
+        "disadvantages" => $disadvantages,
+    ];
+    return $fuga;
 }
