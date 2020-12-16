@@ -1,5 +1,7 @@
-.main {
+main {
+    position: absolute;
+    top: 80px;
     width: 100vw;
-    height: 60vh;
-    background-color: green;
+    height: 1500px;
+    background-color: white;
 }

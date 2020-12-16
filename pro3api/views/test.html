@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+        <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+ 
+    <form id="myform">
+        <input id="input" name="text" type="text">
+        <input id="hidden" type="hidden" name="hidden" value="" >
+        <button name="btn">送信</button>
+    </form>
+        </div>
+    <hr>
+ 
+    <ul id="message"></ul>
+    
+    <script>
+        const socketio=io('http://localhost:9000/auction', { transports: [ 'websocket' ] });
+
+        socketio.on('diff',function(strDiff){
+            console.log('ソケット'+strDiff);
+            var ul = document.getElementById("message");
+            var li = document.createElement('li');
+            li.innerHTML=strDiff;
+            ul.appendChild(li);
+        })
+        
+    </script>
+ 
+    </body>
+</html>
