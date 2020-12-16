@@ -1,7 +1,7 @@
 <?php
 // ---------- 前処理 ----------
 // 関数ファイル読み込み
-require_once("../functions/index_function.php");
+require_once("../functions/admin/index_function.php");
 
 // ---------- 初期値設定エリア ----------
 // デフォルトで使用する固定値を関数から呼び出し
