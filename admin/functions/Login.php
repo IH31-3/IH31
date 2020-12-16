@@ -1,8 +1,13 @@
 
 <?php
 class Login{
+    function CheckLogin(String $user,String $pass){
+      $pass = password_hash($pass,PASSWORD_DEFAULT); 
+    }
     function CreateInstance(){
-        $db = new \PDO('mysql:='.$MYSQL_HOST.';host='.$HOST_NAME.';charset=utf8mb4', $MYSQL_USER, $MYSQL_PASS);
-        $auth = new \Delight\Auth\Auth($db); 
+
+    }
+    function CheckInstance(){
+
     }
 }
