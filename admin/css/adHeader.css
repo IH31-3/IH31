@@ -4,18 +4,21 @@ header {
     background-color: #EAEAEA;
     box-shadow: 0 10px 25px 0 #82828280;
 }
+body{
+    background-origin: #F7F7F7;
+}
 
 header img {
     width: 160px;
     min-width: 160px;
 }
 
-header form {
+header ul {
     display: flex;
     
 }
 
-header button {
+header li, p {
     position: relative;
     font-size: 1.3rem;
     color: #626262;
@@ -25,44 +28,41 @@ header button {
     text-align: center;
 }
 
-header #header-width {
+#header-width {
     
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
-header #logOut{
+#logOut{
     background-color: #767676;
     color:#FFF;
     
 }
-header #logOut button{
+#logOut a{
     width: 250px;
     height: 80px;
     padding-top: 28px;
     display: block;
 }
 
-header #logOut:hover{
+#logOut:hover{
     opacity: 0.9;
 }
 
-/* a→button */
-header button{
+ul li a{
     width: 250px;
     height: 80px;
     padding-top: 28px;
     display: block;
 }
-/* a→button */
-header .mNav button:hover{
+.mNav a:hover{
     background-color: #42A382;
     color: white;
     
 }
-/* a→button */
-header button {
+header a {
     
     position: absolute;
     top: 50%;
