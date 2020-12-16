@@ -1,10 +1,10 @@
 <?php
-require("../../vendor/autoload.php");
 require("../../config.php");
+require("../../vendor/autoload.php");
 require("./Login.php");
 require("./Modify.php");
 require("./Search.php");
-require("./SiginUp.php")
+require("./SignUp.php");
 
 class AdminMain{
     function load_page_source() {
