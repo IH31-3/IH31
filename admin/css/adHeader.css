@@ -10,12 +10,12 @@ header img {
     min-width: 160px;
 }
 
-header ul {
+header form {
     display: flex;
     
 }
 
-header li, p {
+header button {
     position: relative;
     font-size: 1.3rem;
     color: #626262;
@@ -37,7 +37,7 @@ header #logOut{
     color:#FFF;
     
 }
-header #logOut a{
+header #logOut button{
     width: 250px;
     height: 80px;
     padding-top: 28px;
@@ -48,18 +48,21 @@ header #logOut:hover{
     opacity: 0.9;
 }
 
-header ul li a{
+/* a→button */
+header button{
     width: 250px;
     height: 80px;
     padding-top: 28px;
     display: block;
 }
-header .mNav a:hover{
+/* a→button */
+header .mNav button:hover{
     background-color: #42A382;
     color: white;
     
 }
-header a {
+/* a→button */
+header button {
     
     position: absolute;
     top: 50%;

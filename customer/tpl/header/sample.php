@@ -13,7 +13,10 @@
 </head>
 <body>
 <article class="header">
-
+    <button type="submit" name="switch_process_with_button_name ">送信</button>
+    <button type="submit" name="switch_process_with_button_name">送信</button>
+    <button type="submit" name="switch_process_with_button_name">送信</button>
+    <button type="submit" name="switch_process_with_button_name">送信</button>
 <h1>header</h1>
 
 
