@@ -1,5 +1,7 @@
-.footer {
+footer {
+    position: fixed;
+    bottom: 0px;
     width: 100vw;
-    height: 20vh;
-    background-color: blue;
+    height: 100px;
+    background-color: #DDD;
 }

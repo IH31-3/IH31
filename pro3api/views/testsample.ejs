@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+        <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h3>出品：<%= room %></h3>
+        <div class="container">
+
+            <form id="myform">
+                <input id="input" name="text" type="text">
+                <input id="hidden" type="hidden" name="hidden" value="" >
+                <input id="chat" type="hidden" name="chat" value="<%= room %>" >
+                <button id="button"  name="btn">送信</button>
+            </form>
+        </div>
+        <hr>
+        <p id="time"><%= time %></p>
+        <p id="end"></p>
+        <p id="money"><%= money %></p>
+        <ul id="message"></ul>
+
+        <script>
+            const socketio = io();
+
+            /**
+             * オークション識別子
+             * @type Element.value
+             */
+            var chat = document.getElementById("chat").value;
+            var sendData = {
+                auction: chat
+            };
+            socketio.emit('c2s-join', sendData);
+
+
+            /**
+             * 時間取得
+             * @param {type} event
+             * @returns {undefined}
+             */
+            socketio.on('s2cx', function (strDiff) {
+                console.log('ソケット' + strDiff);
+                var time = document.getElementById("time");
+                time.innerHTML = strDiff;
+            })
+
+            /**
+             *終了 
+             * @type type
+             */
+            socketio.on('end', function () {
+                console.log('終了ソケット');
+                var end = document.getElementById("end");
+                end.innerHTML = "終了";
+                var button = document.getElementById("button");
+                button.disabled = true;
+            })
+
+            /**
+             * オークション　下り
+             * @type type
+             */
+            socketio.on('auction_d', function (money) {
+                console.log('オークション');
+                var ul = document.getElementById("message");
+                var li = document.createElement('li');
+                var mon = document.getElementById("money");
+                li.innerHTML = money;
+                mon.innerHTML = money;
+                ul.appendChild(li);
+            })
+
+            /**
+             * オークション　上り
+             * @type Element
+             */
+            const form = document.getElementById("myform");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                var input_message = document.getElementById("input").value;
+                var room = document.getElementById("chat").value;
+                var message = {
+                    msg: input_message,
+                    room: room
+                };
+
+                socketio.emit('auction', message);
+            });
+
+
+
+
+        </script>
+
+    </body>
+</html>
