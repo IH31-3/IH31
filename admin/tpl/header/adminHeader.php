@@ -23,11 +23,11 @@
     <div id="header-width">
         <nav>
             <form action="" method="get">
-                <button type="submit" value="index" name="page"><img src="<?= $const["path_to_logo_image"] ?>" alt="HALMORTOR" width="300px"></button>
-                <button class="mNav" type="submit" value="regist" name="page"><?= $const["regist"] ?></button>
-                <button class="mNav" type="submit" value="matter" name="page"><?= $const["matter"] ?></button>
-                <button class="mNav" type="submit" value="change" name="page"><?= $const["change"] ?></button>
-                <button id="logOut" type="submit" value="logout" name="page"><?= $const["log_out"] ?></button>
+                <button type="submit" value="index_top" name="page"><img src="<?= $const["path_to_logo_image"] ?>" alt="HALMORTOR" width="300px"></button>
+                <button class="mNav" type="submit" value="regist_top" name="page"><?= $const["regist"] ?></button>
+                <button class="mNav" type="submit" value="matter_top" name="page"><?= $const["matter"] ?></button>
+                <button class="mNav" type="submit" value="change_top" name="page"><?= $const["change"] ?></button>
+                <button id="logOut" type="submit" value="logout_top" name="page"><?= $const["log_out"] ?></button>
             </form>
         </nav>
     </div>
