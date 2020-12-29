@@ -19,7 +19,7 @@ if(isset($_GET["page"])){ // 各機能ページ遷移用
     $main = "tpl/main/" . $_GET["page"] . ".php";
     // var_dump($_GET["page"]);
 
-
+}
 // ---------- html出力 ----------
 // 画面呼び出し
 require_once($header);
