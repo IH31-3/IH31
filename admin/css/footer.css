@@ -1,7 +1,8 @@
 footer {
-    position: fixed;
-    bottom: 0px;
+    position:absolute;
+    top: 1500px;
     width: 100vw;
-    height: 100px;
-    background-color: #DDD;
+    height: 80px;
+    background-color: #EAEAEA;
+    box-shadow: 0 10px 25px 0 #82828280;
 }

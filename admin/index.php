@@ -15,11 +15,12 @@ $footer = "tpl/footer/sample.php";
 // ---------- 処理分岐・画面差し替えエリア ----------
 // POST/GETの有無によって処理を分岐
 
-if(isset($_GET["page"])){ // 各機能ページ遷移用
+if(isset($_GET["page"])){ // ページ遷移用
     $main = "tpl/main/" . $_GET["page"] . ".php";
     // var_dump($_GET["page"]);
-
 }
+
+
 // ---------- html出力 ----------
 // 画面呼び出し
 require_once($header);

@@ -1,4 +1,5 @@
 <main>
+    <h2>登録トップ</h2>
     <ul>
         <li><a href="http://127.0.0.1/IH31/admin/index.php?page=regist_employee"><?= "社員登録" ?></a></li>
         <li><a href="http://127.0.0.1/IH31/admin/index.php?page=regist_car"><?= "車両登録" ?></a></li>
