@@ -1,32 +1,35 @@
-
-<?php 
-
-?>
 <main>
-    <hr>
-    <h1>案件検索画面</h1>
-    <hr>
-    <form action="" method="post">
-        <input type="text">検索文字列を入力</input>
-    </form>
+    <h2>案件検索画面</h2>
+    <form action="" method="get">
+        <!-- <input type="hidden" name="page" value="matter_top"> buttonかhiddenかで保持するかも-->
+        <ul>
+            <li>
+                指定なし<input type="radio" name="status" value="指定なし" checked="">
+                督促中<input type="radio" name="status" value="督促中">
+                案件詳細<input type="radio" name="status" value="キャンセル">
+            </li>
 
-    <form action="" method="post">
-        <?php for($i=0; $i<10; $i++): ?>
-            <p><?= "ID:".$i ?><?= "顧客名:"."" ?><?= "金額:"."10000000" ?>
-                <button type="submit" value="cancel" name="regist">キャンセル</button>
-                <button type="submit" value="nofity" name="regist">督促通知</button>
-                <button type="submit" value="detail" name="regist">案件詳細</button>
-            </p>
+            <li><input type="text" name="text" placeholder="検索文字列を入力"></input><button type="submit" name="page" value="matter_top">検索</button></li>
+        </ul>
+    </form>
+    
+    <br>
+
+    <h2>検索結果</h2>
+    <ul>
+        <?php for($i=8; 0<$i; $i--): ?>
+            <li><?= "ID:".$i ?></li>
+            <li><?= "顧客名:"."木原天" ?></li>
+            <li><?= "金額:"."10000000" ?></li>
+            <li><?= "状態:"."入金待ち" ?></li>
+            <li><?= "更新日時:"."2021/01/".$i." 12:30:00"?></li>
+            <li><a href="http://127.0.0.1/IH31/admin/index.php?page=matter_detail&id=<?= $i ?>">詳細へ</a></li>
+
+            <br>
+
         <?php endfor ?>
-    </form>
-    <?php var_dump($fuga) ?>
-    <hr>
+    </ul>
 
-<pre>
-↑こんな感じのフォームを配置して
-送信するのが主になるかな
-
-サンプルとして入力値を処理して表示に反映させておきます。
-</pre>
+    <a href="http://127.0.0.1/IH31/admin/index.php">トップへ戻る</a>
 </main>
 <!-- main ここまで -->

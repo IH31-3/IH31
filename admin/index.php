@@ -15,24 +15,20 @@ $footer = "tpl/footer/sample.php";
 // ---------- 処理分岐・画面差し替えエリア ----------
 // POST/GETの有無によって処理を分岐
 
-if(isset($_GET["page"])){
-    $main = "tpl/main/" . $_GET["page"] . "_top.php";
+if(isset($_GET["page"])){ // ページ遷移用
+    $page = $_GET["page"];
+    $main = "tpl/main/" . $page . ".php";
     // var_dump($_GET["page"]);
+
+    if($page==""){
+
+    }
+
+    if($page=="matter_detail"){
+        $id = $_GET["id"];
+    }
 }
 
-if(isset($_GET["regist"])){
-    $main = "tpl/main/" . $_GET["regist"] . ".php";
-    var_dump($_GET["regist"]);
-}
-
-if(isset($_GET["switch_process_with_button_name"])){
-    // 配列にして送るのも良いと思います。
-    $hoge = get_check_sample($_GET["name"], $_GET["age"], $_GET["gender"], $_GET["address"]);
-}
-
-if(isset($_POST["switch_process_post_data"])){
-    $fuga = post_check_sample($_POST["hobby"], $_POST["qualification"], $_POST["advantages"], $_POST["disadvantages"]);
-}
 
 // ---------- html出力 ----------
 // 画面呼び出し
