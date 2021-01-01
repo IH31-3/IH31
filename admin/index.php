@@ -16,8 +16,17 @@ $footer = "tpl/footer/sample.php";
 // POST/GETの有無によって処理を分岐
 
 if(isset($_GET["page"])){ // ページ遷移用
-    $main = "tpl/main/" . $_GET["page"] . ".php";
+    $page = $_GET["page"];
+    $main = "tpl/main/" . $page . ".php";
     // var_dump($_GET["page"]);
+
+    if($page==""){
+
+    }
+
+    if($page=="matter_detail"){
+        $id = $_GET["id"];
+    }
 }
 
 
