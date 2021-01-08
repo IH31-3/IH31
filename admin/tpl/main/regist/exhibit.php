@@ -1,12 +1,12 @@
 <?php 
 
 // オークション情報をDBから引っ張るのでいったんパラメータにしてます。
-$array = (
+$array = [
     "001" => "12/19開催オークション",
     "002" => "12/26開催オークション",
     "003" => "1/2開催オークション",
     "004" => "1/9開催オークション",
-)
+]
 
 ?>
 <main>
@@ -25,7 +25,7 @@ $array = (
                     <td>
                         <select name="auction">
                             <?php foreach($array as $value): ?>
-                                <option value=$value["""]>冬開催オークション</option>
+                                <option value=$value>冬開催オークション</option>
                             <?php endforeach; ?>
                         </select>
                     </td>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <p>ヘッダーが入る</p>
+        </header>
+        <main>
+            <h2>BID THIS AUCTION</h2>
+            <h3>車名（今はオークション番号）　<%= room %></h3>
+
+            <!-- 画像 -->
+            <article>
+                <p>画像表示エリア</p>
+            </article>
+
+            <!-- オークション情報 -->
+            <article>
+                <section>
+                    <h4>開始価格</h4>
+                    <p>XXX 万円</p>
+                </section>
+
+                <section>
+                    <h4>入札件数</h4>
+                    <p>XXX 件</p>
+                </section>
+
+                <section>
+                    <h4>現在落札価格</h4>
+                    <p id="money"><%= money %></p>
+                </section>
+
+                <section>
+                    <h4>残り時間</h4>
+                    <p id="time"><%= time %></p>
+                </section>
+
+                <section>
+                    <p>※開始価格には、整備費用を含みます。</p>
+                    <p>※落札価格によって価格は変動します。</p>
+                    <p>※落札後、当社の社員がお電話いたします。</p>
+                    <p>※落札後、キャンセルされる場合はキャンセル料が発生します。</p>
+                </section>
+
+            </article>
+
+            <!-- 入札部分 -->
+            <article>
+                <table>
+                    <tr>
+                        <td>現在落札価格</td>
+                        <td>XX 万円</td>
+                    </tr>
+                    <tr>
+                        <td>あなたの入札価格</td>
+                        <td>XX 万円</td>
+                    </tr>
+                </table>
+                <p>現在あなたが暫定落札者です</p><!-- 落札者のときは表示 -->
+                <form id="myform">
+                    <label>
+                        ￥ <input id="input" name="text" type="text">
+                    </label>
+                    <input id="customer" type="hidden" name="hidden" value="" >
+                <input id="chat" type="hidden" name="chat" value="<%= room %>" >
+                
+                <button id="button" type="submit" name="btn" value="この価格で入札する">入札</button>
+                </form>
+            </article>
+
+            <article>
+                <section>
+                    <h3>基本情報</h3>
+                    <table>
+                        <tr>
+                            <td>メーカー</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>車種名</td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td>形状</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>年式</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>排気量</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>モデル</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>グレード</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>燃料</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>型式</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>定員</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>駆動方式</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>走行距離</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>外装色</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>内装色</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Nox期限</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>検査期限</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>名変期限</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>エアバッグ</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>車歴</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>種別区分番号</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>修理歴</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>評価点</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>外装評価</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>内装評価</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>仕入れ金額</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>状態コメント</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>アピールポイント</td>
+                            <td></td>
+                        </tr>
+
+                    </table>
+                </section>
+            </article>
+
+        </main>
+        <footer>
+            <p>フッターが入る</p>
+        </footer>
+
+
+        <!--ノード実行用ＪＳ-->
+        <script>
+            const socketio = io();
+
+            /**
+             * オークション識別子
+             * @type Element.value
+             */
+            var chat = document.getElementById("chat").value;
+            var sendData = {
+                auction: chat
+            };
+            socketio.emit('c2s-join', sendData);
+
+
+            /**
+             * 時間取得
+             * @param {type} event
+             * @returns {undefined}
+             */
+            socketio.on('s2cx', function (strDiff) {
+                console.log('ソケット' + strDiff);
+                var time = document.getElementById("time");
+                time.innerHTML = strDiff;
+            })
+
+            /**
+             *終了 
+             * @type type
+             */
+            socketio.on('end', function () {
+                console.log('終了ソケット');
+                var end = document.getElementById("end");
+                end.innerHTML = "終了";
+                var button = document.getElementById("button");
+                button.disabled = true;
+            })
+
+            /**
+             * オークション　下り
+             * @type type
+             */
+            socketio.on('auction_d', function (money) {
+                console.log('オークション');
+                var ul = document.getElementById("message");
+                var li = document.createElement('li');
+                var mon = document.getElementById("money");
+                li.innerHTML = money;
+                mon.innerHTML = money;
+                ul.appendChild(li);
+            })
+
+            /**
+             * オークション　上り
+             * @type Element
+             */
+            const form = document.getElementById("myform");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                var input_message = document.getElementById("input").value;
+                var room = document.getElementById("chat").value;
+                var message = {
+                    msg: input_message,
+                    room: room
+                };
+
+                socketio.emit('auction', message);
+            });
+
+
+
+
+        </script>
+
+    </body>
+
+</html>

@@ -5,7 +5,7 @@ function load_page_source() {
         "title" => "TOP | HALMORTOR",
         "path_to_logo_image" => "./img/HALMOTOR.png",
         "regist" => "登録",
-        "matter" => "案件",
+        "matter" => "案件検索",
         "change" => "変更・管理",
         "log_out" => "ログアウト",
     ];
