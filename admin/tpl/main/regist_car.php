@@ -239,12 +239,6 @@
         <input type="submit" name="button" value="次へ">
 
     </form>
-
-<<<<<<< HEAD:admin/tpl/main/regist/car.php
-</main>
-<!-- main ここまで -->
-=======
     <a href="http://127.0.0.1/IH31/admin/index.php?page=regist_top">登録トップへ戻る</a>
 </main>
 <!-- main ここまで -->
->>>>>>> 27570d93a84cdde128ee5240ad4c1105a79b779d:admin/tpl/main/regist_car.php
