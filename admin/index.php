@@ -17,22 +17,31 @@ $footer = "tpl/footer/sample.php";
 
 if(isset($_GET["page"])){
     $main = "tpl/main/" . $_GET["page"] . "_top.php";
+    // name="page" の value="" が $_GET["page"] なので例えばregist_top.phpが呼び出される。
+    // tpl/main/regist_top.php
     // var_dump($_GET["page"]);
+
+    if($_GET["page"] == "regist" && isset($_GET["data"])){
+        $main = "tpl/main/regist/" . $_GET["data"] . ".php";
+        // page="regist"でdataがあればその情報をもとに画面呼び出し
+        // var_dump($_GET["data"]);
+    }
 }
 
-if(isset($_GET["regist"])){
-    $main = "tpl/main/" . $_GET["regist"] . ".php";
-    var_dump($_GET["regist"]);
-}
 
-if(isset($_GET["switch_process_with_button_name"])){
-    // 配列にして送るのも良いと思います。
-    $hoge = get_check_sample($_GET["name"], $_GET["age"], $_GET["gender"], $_GET["address"]);
-}
+// if(isset($_GET["regist"])){
+//     $main = "tpl/main/" . $_GET["regist"] . ".php";
+//     var_dump($_GET["regist"]);
+// }
 
-if(isset($_POST["switch_process_post_data"])){
-    $fuga = post_check_sample($_POST["hobby"], $_POST["qualification"], $_POST["advantages"], $_POST["disadvantages"]);
-}
+// if(isset($_GET["switch_process_with_button_name"])){
+//     // 配列にして送るのも良いと思います。
+//     $hoge = get_check_sample($_GET["name"], $_GET["age"], $_GET["gender"], $_GET["address"]);
+// }
+
+// if(isset($_POST["switch_process_post_data"])){
+//     $fuga = post_check_sample($_POST["hobby"], $_POST["qualification"], $_POST["advantages"], $_POST["disadvantages"]);
+// }
 
 // ---------- html出力 ----------
 // 画面呼び出し

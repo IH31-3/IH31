@@ -1,5 +1,5 @@
 <main>
-    <h2>車両情報</h2>
+    <h2>車両情報登録</h2>
     <form name="" method="post">
         <table>
             <tr>
@@ -233,7 +233,12 @@
                     </td>
                 </label>
             </tr>
+
         </table>
-    <input type="submit" name="button" value="次へ">
+
+        <input type="submit" name="button" value="次へ">
+
     </form>
+
 </main>
+<!-- main ここまで -->

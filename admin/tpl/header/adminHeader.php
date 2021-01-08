@@ -24,11 +24,13 @@
         <nav>
             <form action="" method="get">
                 <button type="submit" value="index" name="page"><img src="<?= $const["path_to_logo_image"] ?>" alt="HALMORTOR" width="300px"></button>
-                <button class="mNav" type="submit" value="regist" name="page"><?= $const["regist"] ?></button>
-                <button class="mNav" type="submit" value="matter" name="page"><?= $const["matter"] ?></button>
-                <button class="mNav" type="submit" value="change" name="page"><?= $const["change"] ?></button>
-                <button id="logOut" type="submit" value="logout" name="page"><?= $const["log_out"] ?></button>
-            </form>
+                <button class="mNav" type="submit" value="regist" name="page">登録</button>
+                <button class="mNav" type="submit" value="matter" name="page">案件</button>
+                <button class="mNav" type="submit" value="change" name="page">変更・管理</button>
+                <button id="logOut" type="submit" value="logout" name="page">ログアウト</button>
+            </form> 
+            <!-- <a href="http://127.0.0.1/IH31/admin/index.php?page=regist">aaa</a>
+            <a href="http://127.0.0.1/IH31/admin/index.php?page=matter">bbb</a> -->
         </nav>
     </div>
 </header>
