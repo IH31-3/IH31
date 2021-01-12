@@ -108,6 +108,28 @@ function regist_exhibit(){
     return $result;
 }
 
+// 案件登録
+function regist_matter(){
+    $matter_id = $_POST["matter_id"];
+    $customer_id = $_POST["customer_id"];
+    $employee_id = $_POST["employee_id"];
+    $car_id = $_POST["car_id"];
+    $car_price = $_POST["car_price"];
+    $car_status = $_POST["car_status"];
+
+    // db接続sql実行してください。
+
+    $result = [
+        $matter_id,
+        $customer_id,
+        $employee_id,
+        $car_id,
+        $car_price,
+        $car_status,
+    ];
+    return $result;
+}
+
 // オークション登録
 function regist_auction(){
     $auction_id = $_POST["auction_id"];
