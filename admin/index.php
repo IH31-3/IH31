@@ -1,7 +1,7 @@
 <?php
 // ---------- 前処理 ----------
 // 関数ファイル読み込み
-require_once("../functions/admin/index_function.php");
+require_once("../functions/admin/functions.php");
 
 // ---------- 初期値設定エリア ----------
 // デフォルトで使用する固定値を関数から呼び出し
@@ -13,25 +13,68 @@ $footer = "tpl/footer/sample.php";
 
 
 // ---------- 処理分岐・画面差し替えエリア ----------
-// POST/GETの有無によって処理を分岐
 
-if(isset($_GET["page"])){
-    $main = "tpl/main/" . $_GET["page"] . "_top.php";
-    // var_dump($_GET["page"]);
+if(isset($_GET["page"])){ // ----- ページ遷移用
+    $page = $_GET["page"];
+
+    // 案件表示前の案件検索結果一覧表示
+    if($page=="matter_top"){
+        // $result = matter_all_search($_GET["status"], $_GET["text"]);
+        // statusとtextで案件検索、結果を配列でmatter_topにて表示する
+    }
+
+    // 案件詳細表示
+    if($page=="matter_detail"){
+        $id = $_GET["id"];
+        // 案件詳細表示用にmatter_topからid取得、matter_detailにて表示する
+    }
+
+    // 出品登録画面表示のselect用オークション一覧表示
+    if($page=="regist_exhibit"){
+        // $result = auction_all_search();
+        // 開催前のオークションを検索、結果を配列でregist_exhibit内selectボックスにて表示する
+
+        $result = [
+            "auction1" => "春季開催！春のセール",
+            "auction2" => "夏季開催！夏のセール",
+        ];
+    }
+
+    // --- 呼び出しmainページの変更
+    $main = "tpl/main/" . $page . ".php";
 }
 
-if(isset($_GET["regist"])){
-    $main = "tpl/main/" . $_GET["regist"] . ".php";
-    var_dump($_GET["regist"]);
-}
+if(isset($_POST["type"])){ // ----- POST登録用
+    $type = $_POST["type"];
+    $page = "done";
 
-if(isset($_GET["switch_process_with_button_name"])){
-    // 配列にして送るのも良いと思います。
-    $hoge = get_check_sample($_GET["name"], $_GET["age"], $_GET["gender"], $_GET["address"]);
-}
+    // 従業員登録
+    if($type == "regist_employee"){
+        $result = regist_employee();
+    }
+    // 車両登録
+    if($type == "regist_car"){
+        $result = regist_car();
+    }
+    // 出品登録
+    if($type == "regist_exhibit"){
+        $result = regist_exhibit();
+    }
+    // 売上登録
+    if($type == "regist_sales"){
+        $result = regist_sales();
+    }
+    // 案件登録
+    if($type == "regist_matter"){
+        $result = regist_matter();
+    }
+    // オークション登録
+    if($type == "regist_auction"){
+        $result = regist_auction();
+    }
 
-if(isset($_POST["switch_process_post_data"])){
-    $fuga = post_check_sample($_POST["hobby"], $_POST["qualification"], $_POST["advantages"], $_POST["disadvantages"]);
+    // --- 呼び出しmainページの変更
+    $main = "tpl/main/" . $page . ".php";
 }
 
 // ---------- html出力 ----------

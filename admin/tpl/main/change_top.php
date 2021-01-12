@@ -1,23 +1,11 @@
-<main>
-    <hr>
-    <h1>変更画面</h1>
-    <hr>
-    <form action="" method="post">
-        <ul>
-            <li><button type="submit" value="キャンセル" name="to_regist"></button></li>
-            <li><button type="submit" value="督促通知 name="to_regist"></button></li>
-            <li><button type="submit" value="案件詳細 name="to_regist"></button></li>
-        </ul>
-        <button type="submit" name="switch_process_post_data">送信</button>
-    </form>
-    <?php var_dump($fuga) ?>
-    <hr>
+    <h2>変更トップ</h2>
+    <ul>
+        <li><a href="http://127.0.0.1/IH31/admin/index.php?page=change_car"><?= "車両検索" ?></a></li>
+        <li><a href="http://127.0.0.1/IH31/admin/index.php?page=change_sales"><?= "売上検索" ?></a></li>
+        <li><a href="http://127.0.0.1/IH31/admin/index.php?page=change_customer"><?= "顧客検索" ?></a></li>
+        <li><a href="http://127.0.0.1/IH31/admin/index.php?page=change_auction"><?= "オークション検索" ?></a></li>
+    </ul>
 
-<pre>
-↑こんな感じのフォームを配置して
-送信するのが主になるかな
-
-サンプルとして入力値を処理して表示に反映させておきます。
-</pre>
+    <a href="http://127.0.0.1/IH31/admin/index.php">トップへ戻る</a>
 </main>
 <!-- main ここまで -->
