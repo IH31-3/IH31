@@ -8,7 +8,7 @@ require_once("../functions/customer/functions.php");
 // デフォルトで使用するテンプレートの指定
 $header = "tpl/header/customerHeader.php";
 $main = "tpl/main/index_top.php";
-$footer = "tpl/footer/sample.php";
+$footer = "tpl/footer/customerFooter.php";
 
 
 // ---------- 処理分岐・画面差し替えエリア ----------

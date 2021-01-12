@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="./css/main.css">
 
     <!-- footer css -->
-    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <link rel="stylesheet" type="text/css" href="./css/csFooter.css">
     <title>TOP | HALMOTOR</title>
 </head>
 
