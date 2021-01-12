@@ -29,7 +29,6 @@ if(isset($_GET["page"])){ // ページ遷移用
     }
 }
 
-
 // ---------- html出力 ----------
 // 画面呼び出し
 require_once($header);

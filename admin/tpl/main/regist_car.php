@@ -1,5 +1,5 @@
 <main>
-    <h2>車両情報</h2>
+    <h2>車両情報登録</h2>
     <form name="" method="post">
         <table>
             <tr>
@@ -233,10 +233,12 @@
                     </td>
                 </label>
             </tr>
-        </table>
-    <input type="submit" name="button" value="次へ">
-    </form>
 
+        </table>
+
+        <input type="submit" name="button" value="次へ">
+
+    </form>
     <a href="http://127.0.0.1/IH31/admin/index.php?page=regist_top">登録トップへ戻る</a>
 </main>
 <!-- main ここまで -->
