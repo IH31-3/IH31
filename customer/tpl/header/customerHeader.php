@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- reset css -->
-    <link rel="stylesheet" href="./css/destyle.css">
+    <link rel="stylesheet" type="text/css" href="./css/destyle.css">
 
     <!-- header css -->
-    <link rel="stylesheet" href="./css/csHeader.css">
+    <link rel="stylesheet" type="text/css" href="./css/csHeader.css">
     
     <!-- main css -->
     <link rel="stylesheet" type="text/css" href="./css/main.css">
@@ -29,7 +29,6 @@
                 <li class="mNav"><a href="http://127.0.0.1/IH31/customer/index.php?page=mypage_top"><img src="./img/mypage.png" width="2px">MY PAGE</a></li>
             </ul>
         </nav>
-        
     </div>
 </header>
 <!-- header ここまで-->

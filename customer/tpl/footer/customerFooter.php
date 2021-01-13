@@ -18,5 +18,4 @@
     <p id="footer-bottom"><small>＠2021 HAL MOTORS All Rights Reserved</small></p>
 </footer>
 </body>
-
 </html>
