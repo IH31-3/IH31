@@ -1,5 +1,5 @@
 <footer>
-    <p>フッター画面</p>
+    <!-- <p>フッター画面</p> -->
 </footer>
 <!-- footer ここまで -->
 <script>
