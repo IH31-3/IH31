@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
     </head>
 
     <body>
@@ -14,7 +14,7 @@
         </header>
         <main>
             <h2>BID THIS AUCTION</h2>
-            <h3>車名（今はオークション番号）　<%= room %></h3>
+            <h3>車名　<%= vehicle['model_name'] %></h3>
 
             <!-- 画像 -->
             <article>
@@ -25,17 +25,17 @@
             <article>
                 <section>
                     <h4>開始価格</h4>
-                    <p>XXX 万円</p>
+                    <p><%= start %> 万円</p>
                 </section>
 
                 <section>
                     <h4>入札件数</h4>
-                    <p>XXX 件</p>
+                    <p id = "count"><%= count %> </p><p> 件</p>
                 </section>
 
                 <section>
                     <h4>現在落札価格</h4>
-                    <p id="money"><%= money %></p>
+                    <p id="money"><%= money %></p><p>万円</p>
                 </section>
 
                 <section>
@@ -54,27 +54,19 @@
 
             <!-- 入札部分 -->
             <article>
-                <table>
-                    <tr>
-                        <td>現在落札価格</td>
-                        <td>XX 万円</td>
-                    </tr>
-                    <tr>
-                        <td>あなたの入札価格</td>
-                        <td>XX 万円</td>
-                    </tr>
-                </table>
-                <p>現在あなたが暫定落札者です</p><!-- 落札者のときは表示 -->
+                <p id = "display">現在あなたが暫定落札者です</p><!-- 落札者のときは表示 -->
                 <form id="myform">
                     <label>
-                        ￥ <input id="input" name="text" type="text">
+                        ￥ <input id="input" name="text" type="text">万
                     </label>
-                    <input id="customer" type="hidden" name="hidden" value="" >
-                <input id="chat" type="hidden" name="chat" value="<%= room %>" >
-                
-                <button id="button" type="submit" name="btn" value="この価格で入札する">入札</button>
+                    <!-- 消さないで-->
+                    <input id="customer" type="hidden" name="hidden" value="<%= customer %>" >
+                    <input id="chat" type="hidden" name="chat" value="<%= room %>" >
+                    <!-- 消さないで -->
+                    <button id="button"  name="btn" value="">入札</button>
                 </form>
             </article>
+            <p id="end"></p>
 
             <article>
                 <section>
@@ -82,44 +74,44 @@
                     <table>
                         <tr>
                             <td>メーカー</td>
-                            <td></td>
+                            <td><%= vehicle['maker'] %></td>
                         </tr>
                         <tr>
                             <td>車種名</td>
-                            <td></td>
+                            <td><%= vehicle['model_name'] %></td>
 
                         </tr>
                         <tr>
                             <td>形状</td>
-                            <td></td>
+                            <td><%= vehicle['shape'] %></td>
                         </tr>
                         <tr>
                             <td>年式</td>
-                            <td></td>
+                            <td><%= vehicle['model_year'] %></td>
                         </tr>
                         <tr>
                             <td>排気量</td>
-                            <td></td>
+                            <td><%= vehicle['displacement'] %></td>
                         </tr>
                         <tr>
                             <td>モデル</td>
-                            <td></td>
+                            <td><%= vehicle['model'] %></td>
                         </tr>
                         <tr>
                             <td>グレード</td>
-                            <td></td>
+                            <td><%= vehicle['grade'] %></td>
                         </tr>
                         <tr>
                             <td>燃料</td>
-                            <td></td>
+                            <td><%= vehicle['fuel'] %></td>
                         </tr>
                         <tr>
                             <td>型式</td>
-                            <td></td>
+                            <td><%= vehicle['vehicle_model'] %></td>
                         </tr>
                         <tr>
                             <td>定員</td>
-                            <td></td>
+                            <td><%= vehicle['capacity'] %></td>
                         </tr>
                         <tr>
                             <td>駆動方式</td>
@@ -206,6 +198,13 @@
             const socketio = io();
 
             /**
+             * オークション落札者表示を消しておく
+             * @type Element
+             */
+            var display = document.getElementById("display");
+            display.style.display = " none";
+
+            /**
              * オークション識別子
              * @type Element.value
              */
@@ -234,23 +233,35 @@
             socketio.on('end', function () {
                 console.log('終了ソケット');
                 var end = document.getElementById("end");
-                end.innerHTML = "終了";
+
                 var button = document.getElementById("button");
                 button.disabled = true;
+                //alert("終了しました");
             })
 
             /**
              * オークション　下り
              * @type type
              */
-            socketio.on('auction_d', function (money) {
+            socketio.on('auction_d', function (msg) {
                 console.log('オークション');
                 var ul = document.getElementById("message");
                 var li = document.createElement('li');
                 var mon = document.getElementById("money");
-                li.innerHTML = money;
-                mon.innerHTML = money;
-                ul.appendChild(li);
+                var cnt = document.getElementById("count");
+//                li.innerHTML = msg;
+                mon.innerHTML = msg.msg;
+                cnt.innerHTML = msg.count;
+//                ul.appendChild(li);
+                console.log(msg);
+                //落札者表示を消す 返答id と顧客ID が一致しない場合
+                var customer = document.getElementById("customer").value;
+                console.log("customer :" + customer);
+                console.log(!(parseInt(customer) == parseInt(msg.customer)));
+                if (!(parseInt(customer) == parseInt(msg.customer))) {
+                    var display = document.getElementById("display");
+                    display.style.display = "none";
+                }
             })
 
             /**
@@ -262,12 +273,20 @@
                 event.preventDefault();
                 var input_message = document.getElementById("input").value;
                 var room = document.getElementById("chat").value;
+                var customer = document.getElementById("customer").value;
                 var message = {
                     msg: input_message,
-                    room: room
+                    room: room,
+                    customer: customer
                 };
 
                 socketio.emit('auction', message);
+
+                //落札者表示を表示  
+
+                var display = document.getElementById("display");
+                display.style.display = "block";
+
             });
 
 
