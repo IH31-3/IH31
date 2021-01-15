@@ -1,4 +1,4 @@
-<main>
+<main id="auction_top">
     <h2>AUCTION</h2>
     <h2>現在開催中のオークション</h2>
 

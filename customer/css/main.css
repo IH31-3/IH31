@@ -4,3 +4,7 @@ main {
     /* background-color: green;
     color: red; */
 }
+
+#history_top #main_image img{
+    width: 100%;
+}

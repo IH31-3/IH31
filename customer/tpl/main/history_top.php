@@ -1,6 +1,6 @@
-<main>
+<main id="history_top">
     <div id="main_image">
-    <img src="./img/mainVisual.png" width="800px">
+    <img src="./img/mainVisual.png">
     </div>
 
     <article>
