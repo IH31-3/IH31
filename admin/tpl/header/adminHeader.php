@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- reset css -->
-    <link rel="stylesheet" href="./css/destyle.css">
+    <link rel="stylesheet" type="text/css" href="./css/destyle.css">
 
     <!-- header css -->
-    <link rel="stylesheet" href="./css/adHeader.css">
+    <link rel="stylesheet" type="text/css" href="./css/adHeader.css">
     
     <!-- main css -->
     <link rel="stylesheet" type="text/css" href="./css/main.css">
@@ -16,6 +16,42 @@
     <!-- footer css -->
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
     <title><?= $const["title"] ?></title>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['month', '店頭販売', 'サイト販売', '決済済み'],
+          ['2020/01',  144,      782,         430],
+          ['2020/02',  165,      938,         522],
+          ['2020/03',  139,      1110,        615],
+          ['2020/04',  157,      1167,        587],
+          ['2020/05',  135,      1120,        567],
+          ['2020/06',  136,      1100,        543],
+          ['2020/07',  144,      782,         430],
+          ['2020/08',  165,      938,         522],
+          ['2020/09',  135,      1120,        599],
+          ['2020/10',  157,      1167,        587],
+          ['2020/11',  139,      1110,        615],
+          ['2020/12',  136,      1254,        629],
+        ]);
+
+        var options = {
+          title : '過去一年間の売り上げ',
+          vAxis: {title: '千万円'},
+          hAxis: {title: '年/月'},
+          seriesType: 'bars',
+          series: {5: {type: 'line'}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
 </head>
 
 <body>
@@ -23,13 +59,13 @@
     <div id="header-width">
         <nav>
             <ul>
-                <li><a href="./index.php"><img src="<?= $const["path_to_logo_image"] ?>" alt="HALMORTOR" width="300px"></a></li>
-                <li class="mNav"><a href=""><?= $const["regist"] ?></a></li>
-                <li class="mNav"><a href=""><?= $const["matter"] ?></a></li>
-                <li class="mNav"><a href=""><?= $const["change"] ?></a></li>
+                <li><a href="http://127.0.0.1/IH31/admin/index.php?page=index_top"><img src="<?= $const["path_to_logo_image"] ?>" alt="HALMORTOR" width="300px"></a></li>
+                <li class="mNav"><a href="http://127.0.0.1/IH31/admin/index.php?page=regist_top"><?= $const["regist"] ?></a></li>
+                <li class="mNav"><a href="http://127.0.0.1/IH31/admin/index.php?page=matter_top"><?= $const["matter"] ?></a></li>
+                <li class="mNav"><a href="http://127.0.0.1/IH31/admin/index.php?page=change_top"><?= $const["change"] ?></a></li>
+                <li id="logOut"><a href="http://127.0.0.1/IH31/admin/index.php?page=logout_top"><?= $const["log_out"] ?></a></li>
             </ul>
         </nav>
-        <p id="logOut"><a href=""><?= $const["log_out"] ?></a></p>
     </div>
 </header>
 <!-- header ここまで-->

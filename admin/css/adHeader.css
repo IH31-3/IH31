@@ -25,26 +25,26 @@ header li, p {
     text-align: center;
 }
 
-header #header-width {
+#header-width {
     
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
-header #logOut{
+#logOut{
     background-color: #767676;
     color:#FFF;
     
 }
-header #logOut a{
+#logOut a{
     width: 250px;
     height: 80px;
     padding-top: 28px;
     display: block;
 }
 
-header #logOut:hover{
+#logOut:hover{
     opacity: 0.9;
 }
 
