@@ -1,5 +1,6 @@
-.main {
+main {
     width: 100vw;
-    height: 60vh;
-    background-color: green;
+    height: 100vh;
+    /* background-color: green;
+    color: red; */
 }
