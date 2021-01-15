@@ -15,9 +15,21 @@
         <h3> 情報を入力 </h3>
         <ul>
             <li>車両番号：<input type="text" name="car_no"></li>
-            <li>車両年式：<input type="text" name="model_year"></li>
+            <li>車両年式：<input type="text" name="model_year">年</li>
             <li>車種名：<input type="text" name="car_type"></li>
-            <li>車両形状：<input type="text" name="car_form"></li>
+            <!-- <li>車両形状：<input type="text" name="car_form"></li> -->
+            <li>
+            車両形状：<select name="car_form">
+                <option value="セダン">セダン</option>
+                <option value="クーペ">クーペ</option>
+                <option value="オープンカー">オープンカー</option>
+                <option value="ステーションワゴン">ステーションワゴン</option>
+                <option value="ワンボックス">ワンボックス</option>
+                <option value="ミニバン">ミニバン</option>
+                <option value="SUV">SUV</option>
+                <option value="ハッチバック">ハッチバック</option>
+            </select>
+            </li>
             <li>排気量：<input type="text" name="car_displacement"></li>
             <li>モデル：<input type="text" name="car_model"></li>
             <li>グレード：<input type="text" name="car_grade"></li>
