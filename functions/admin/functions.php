@@ -45,6 +45,13 @@ function regist_car(){
         $image_path = "../carimg/" . $car_no . "_" . $i . ".jpg";
         move_uploaded_file($images[$i]["tmp_name"], $image_path);
     endfor;
+    // 画像名は、
+    // 車体NO + _0.jpg
+    // 車体NO + _1.jpg
+    // 車体NO + _2.jpg
+    // 車体NO + _3.jpg
+    // になっているので、呼び出す画面でループさせます。
+    // 車体NOだけわかれば表示できるので、画像パスはDB保存しなくて大丈夫です。
 
     // その他データ
     $car_no = $_POST["car_no"];
