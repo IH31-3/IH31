@@ -30,7 +30,7 @@ function regist_employee(){
 
 // 車両登録
 function regist_car(){
-    $car_id = $_POST["car_id"];
+    $car_no = $_POST["car_no"];
     $model_year = $_POST["model_year"];
     $car_type = $_POST["car_type"];
     $car_form = $_POST["car_form"];
@@ -59,10 +59,37 @@ function regist_car(){
     $car_status_comment = $_POST["car_status_comment"];
     $car_appeal_comment = $_POST["car_appeal_comment"];
 
+    // 画像取得
+    $images = [
+        $_FILES["image1"],
+        $_FILES["image2"],
+        $_FILES["image3"],
+        $_FILES["image4"],
+    ];
+
+    // 別名で保存
+    for($i=0;$i<4;$i++):
+        // 画像保存先パスの生成・保存
+        $image_path = "../carimg/" . $car_no . "_" . $i . ".jpg";
+        var_dump($image_path);
+        move_uploaded_file($images[$i]["tmp_name"], $image_path);
+    endfor;
+    // 画像名は、
+    // 車体NO + _0.jpg
+    // 車体NO + _1.jpg
+    // 車体NO + _2.jpg
+    // 車体NO + _3.jpg
+    // になっているので、呼び出す画面でループさせます。
+    // 車体NOだけわかれば表示できるので、画像パスはDB保存しなくて大丈夫です。
+
     // db接続sql実行してください。
 
     $result = [
-        $car_id,
+        "<p><img src='../carimg/" . $car_no . "_0.jpg' height='250', width='250'></p>",
+        "<p><img src='../carimg/" . $car_no . "_1.jpg' height='250', width='250'></p>",
+        "<p><img src='../carimg/" . $car_no . "_2.jpg' height='250', width='250'></p>",
+        "<p><img src='../carimg/" . $car_no . "_3.jpg' height='250', width='250'></p>",
+        $car_no,
         $model_year,
         $car_type,
         $car_form,
