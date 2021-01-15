@@ -14,7 +14,7 @@
         </header>
         <main>
             <h2>BID THIS AUCTION</h2>
-            <h3>車名（今はオークション番号）　<%= room %></h3>
+            <h3>車名　<%= vehicle['model_name'] %></h3>
 
             <!-- 画像 -->
             <article>
@@ -35,7 +35,7 @@
 
                 <section>
                     <h4>現在落札価格</h4>
-                    <p id="money"><%= money %></p>
+                    <p id="money"><%= money %></p><p>万円</p>
                 </section>
 
                 <section>
@@ -57,11 +57,12 @@
                 <p id = "display">現在あなたが暫定落札者です</p><!-- 落札者のときは表示 -->
                 <form id="myform">
                     <label>
-                        ￥ <input id="input" name="text" type="text">
+                        ￥ <input id="input" name="text" type="text">万
                     </label>
+                    <!-- 消さないで-->
                     <input id="customer" type="hidden" name="hidden" value="<%= customer %>" >
                     <input id="chat" type="hidden" name="chat" value="<%= room %>" >
-
+                    <!-- 消さないで -->
                     <button id="button"  name="btn" value="">入札</button>
                 </form>
             </article>
@@ -73,44 +74,44 @@
                     <table>
                         <tr>
                             <td>メーカー</td>
-                            <td></td>
+                            <td><%= vehicle['maker'] %></td>
                         </tr>
                         <tr>
                             <td>車種名</td>
-                            <td></td>
+                            <td><%= vehicle['model_name'] %></td>
 
                         </tr>
                         <tr>
                             <td>形状</td>
-                            <td></td>
+                            <td><%= vehicle['shape'] %></td>
                         </tr>
                         <tr>
                             <td>年式</td>
-                            <td></td>
+                            <td><%= vehicle['model_year'] %></td>
                         </tr>
                         <tr>
                             <td>排気量</td>
-                            <td></td>
+                            <td><%= vehicle['displacement'] %></td>
                         </tr>
                         <tr>
                             <td>モデル</td>
-                            <td></td>
+                            <td><%= vehicle['model'] %></td>
                         </tr>
                         <tr>
                             <td>グレード</td>
-                            <td></td>
+                            <td><%= vehicle['grade'] %></td>
                         </tr>
                         <tr>
                             <td>燃料</td>
-                            <td></td>
+                            <td><%= vehicle['fuel'] %></td>
                         </tr>
                         <tr>
                             <td>型式</td>
-                            <td></td>
+                            <td><%= vehicle['vehicle_model'] %></td>
                         </tr>
                         <tr>
                             <td>定員</td>
-                            <td></td>
+                            <td><%= vehicle['capacity'] %></td>
                         </tr>
                         <tr>
                             <td>駆動方式</td>
@@ -255,7 +256,9 @@
                 console.log(msg);
                 //落札者表示を消す 返答id と顧客ID が一致しない場合
                 var customer = document.getElementById("customer").value;
-                if (!customer == msg.customer) {
+                console.log("customer :" + customer);
+                console.log(!(parseInt(customer) == parseInt(msg.customer)));
+                if (!(parseInt(customer) == parseInt(msg.customer))) {
                     var display = document.getElementById("display");
                     display.style.display = "none";
                 }
