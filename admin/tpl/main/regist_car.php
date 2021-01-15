@@ -1,9 +1,20 @@
 <main>
     <h2>車両登録</h2>
-    <form action="" method="post">
+    <form action="" method="post" enctype = "multipart/form-data">
     <input type="hidden" name="type" value="regist_car">
+        <br>
+        <h3> 写真を選択 </h3>
         <ul>
-            <li>車両番号：<input type="text" name="car_id"></li>
+            <li>正面：<input type="file" value = "写真1" name="image1"></li>
+            <li>左側：<input type="file" value = "写真2" name="image2"></li>
+            <li>右側：<input type="file" value = "写真3" name="image3"></li>
+            <li>背面：<input type="file" value = "写真4" name="image4"></li>
+        </ul>
+
+        <br>
+        <h3> 情報を入力 </h3>
+        <ul>
+            <li>車両番号：<input type="text" name="car_no"></li>
             <li>車両年式：<input type="text" name="model_year"></li>
             <li>車種名：<input type="text" name="car_type"></li>
             <li>車両形状：<input type="text" name="car_form"></li>

@@ -1,12 +1,11 @@
 <main>
     <h2>マイページトップ</h2>
     <ul>
-        <li><a href="http://127.0.0.1/IH31/admin/index.php?page=regist_employee"><?= "社員登録" ?></a></li>
-        <li><a href="http://127.0.0.1/IH31/admin/index.php?page=regist_car"><?= "車両登録" ?></a></li>
-        <li><a href="http://127.0.0.1/IH31/admin/index.php?page=regist_exhibit"><?= "出品登録" ?></a></li>
-        <li><a href="http://127.0.0.1/IH31/admin/index.php?page=regist_sales"><?= "売上登録" ?></a></li>
-        <li><a href="http://127.0.0.1/IH31/admin/index.php?page=regist_matter"><?= "案件登録" ?></a></li>
-        <li><a href="http://127.0.0.1/IH31/admin/index.php?page=regist_auction"><?= "オークション登録" ?></a></li>
+        <li><a href="http://127.0.0.1/IH31/customer/index.php?page=mypage_cars"><?= "取引車両一覧" ?></a></li>
+        <li><a href="http://127.0.0.1/IH31/customer/index.php?page=mypage_info"><?= "登録情報確認" ?></a></li>
+        <li><a href="http://127.0.0.1/IH31/customer/index.php?page=mypage_transaction"><?= "取引状況確認" ?></a></li>
+        <li><a href="http://127.0.0.1/IH31/customer/index.php?page=mypage_logout"><?= "ログアウト" ?></a></li>
+
     </ul>
 
     <a href="http://127.0.0.1/IH31/customer/index.php">トップへ戻る</a>

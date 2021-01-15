@@ -30,7 +30,24 @@ function regist_employee(){
 
 // 車両登録
 function regist_car(){
-    $car_id = $_POST["car_id"];
+
+    // 画像取得
+    $images = [
+        $_FILES["image1"],
+        $_FILES["image2"],
+        $_FILES["image3"],
+        $_FILES["image4"],
+    ];
+
+    // 別名で保存
+    for($i=0;$i<4;$i++):
+        // 画像保存先パスの生成・保存
+        $image_path = "../carimg/" . $car_no . "_" . $i . ".jpg";
+        move_uploaded_file($images[$i]["tmp_name"], $image_path);
+    endfor;
+
+    // その他データ
+    $car_no = $_POST["car_no"];
     $model_year = $_POST["model_year"];
     $car_type = $_POST["car_type"];
     $car_form = $_POST["car_form"];

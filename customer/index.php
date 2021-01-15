@@ -51,7 +51,7 @@ if(isset($_GET["page"])){ // ----- ページ遷移用
     $main = "tpl/main/" . $page . ".php";
 }
 
-if(isset($_POST["type"])){ // ----- POST登録用
+if(isset($_POST["type"])){ // ----- 情報登録用
     $type = $_POST["type"];
     $page = "done";
 
