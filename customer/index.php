@@ -2,7 +2,9 @@
 // ---------- 前処理 ----------
 session_start();
 if(!isset($_SESSION['user_id'])){
-    $_SESSION['user_id'] = 0;
+
+    // ログイン中のユーザーIDとして00001234を保持
+    $_SESSION['user_id'] = 00001234;
 }
 // 関数ファイル読み込み
 require_once("../functions/customer/functions.php");
@@ -25,6 +27,7 @@ if(isset($_GET["page"])){ // ----- ページ遷移用
         // // 開催中のオークション名を一表示する
         // $auction_name = "春季開催！春のセール";
         // // オークションに並ぶ車を一覧表示する
+
         // $cars = [
         //     "スバルの車",
         //     "マツダの車",
