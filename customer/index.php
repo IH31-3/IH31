@@ -3,8 +3,8 @@
 session_start();
 if(!isset($_SESSION['user_id'])){
 
-    // ログイン中のユーザーIDとして00001234を保持
-    $_SESSION['user_id'] = 00001234;
+    // ログイン中のユーザーIDとして001を保持
+    $_SESSION['user_id'] = "001";
 }
 // 関数ファイル読み込み
 require_once("../functions/customer/functions.php");
@@ -36,7 +36,7 @@ if(isset($_GET["page"])){ // ----- ページ遷移用
         //     "ニッサンの車",
         // ];
 
-        $auction_bid_url = "127.0.0.1:9000/auction/" . $_SESSION['user_id'];
+        $auction_bid_url = "http://127.0.0.1:9000/auction/" . $_SESSION['user_id'];
     }
 
     // // 案件詳細表示
