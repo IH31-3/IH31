@@ -1,0 +1,72 @@
+footer {
+    width:100%;
+}
+
+footer #footer-top{
+    text-align: center;
+    line-height: 45px;
+    padding: 50px;
+    background-color: #EAEAEA;
+    height: 350px;
+}
+
+footer #footer-content{
+    background-color: white;
+    height: 250px;
+    width: 70%;
+    border: solid 1px #707070;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px 0 #82828280;
+    
+}
+
+
+footer #footer-bottom,#footer-middle{
+    background-color: #292727;
+    color: white;
+}
+
+footer #footer-middle{
+    height: 180px;
+
+}
+
+footer #footer-bottom{
+    text-align: center;
+    height: 50px;
+}
+
+footer #footer-middle ul{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 70px;
+}
+
+footer p small{
+    text-align: center;
+}
+
+/* 文字スタイル */
+footer .bold{
+    font-weight: 600;
+}
+
+footer .thin{
+    font-size: 0.6rem;
+}
+
+footer .pink{
+    color: #EA5D5D;
+}
+
+footer .big{
+    font-size: 2.3rem;
+
+}
+
+footer .edge{
+    padding-top:30px ;
+    padding-bottom: 30px;
+}
