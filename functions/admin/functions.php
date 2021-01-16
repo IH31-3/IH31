@@ -70,8 +70,7 @@ function regist_car(){
     // 別名で保存
     for($i=0;$i<4;$i++):
         // 画像保存先パスの生成・保存
-        $image_path = "../carimg/" . $car_no . "_" . $i . ".jpg";
-        var_dump($image_path);
+        $image_path = "../pro3api/car_img/" . $car_no . "_" . $i . ".jpg";
         move_uploaded_file($images[$i]["tmp_name"], $image_path);
     endfor;
     // 画像名は、
@@ -85,10 +84,10 @@ function regist_car(){
     // db接続sql実行してください。
 
     $result = [
-        "<p><img src='../carimg/" . $car_no . "_0.jpg' height='250', width='250'></p>",
-        "<p><img src='../carimg/" . $car_no . "_1.jpg' height='250', width='250'></p>",
-        "<p><img src='../carimg/" . $car_no . "_2.jpg' height='250', width='250'></p>",
-        "<p><img src='../carimg/" . $car_no . "_3.jpg' height='250', width='250'></p>",
+        "<p><img src='../pro3api/car_img/" . $car_no . "_0.jpg' height='250', width='250'></p>",
+        "<p><img src='../pro3api/car_img/" . $car_no . "_1.jpg' height='250', width='250'></p>",
+        "<p><img src='../pro3api/car_img/" . $car_no . "_2.jpg' height='250', width='250'></p>",
+        "<p><img src='../pro3api/car_img/" . $car_no . "_3.jpg' height='250', width='250'></p>",
         $car_no,
         $model_year,
         $car_type,

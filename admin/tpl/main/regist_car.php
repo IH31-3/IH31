@@ -20,17 +20,26 @@
             <!-- <li>車両形状：<input type="text" name="car_form"></li> -->
             <li>
             車両形状：<select name="car_form">
-                <option value="セダン">セダン</option>
-                <option value="クーペ">クーペ</option>
-                <option value="オープンカー">オープンカー</option>
-                <option value="ステーションワゴン">ステーションワゴン</option>
-                <option value="ワンボックス">ワンボックス</option>
-                <option value="ミニバン">ミニバン</option>
-                <option value="SUV">SUV</option>
-                <option value="ハッチバック">ハッチバック</option>
+                <option value="トラック">T：トラック</option>
+                <option value="バン">V：バン</option>
+                <option value="ハッチバック">HB：ハッチバック</option>
+                <option value="クーペ">CP：クーペ</option>
+                <option value="ハードトップ">HT：ハードトップ</option>
+                <option value="セダン">SD：セダン</option>
+                <option value="ワゴン">W：ワゴン</option>
+                <option value="ステーションワゴン">SW：ステーションワゴン</option>
             </select>
             </li>
-            <li>排気量：<input type="text" name="car_displacement"></li>
+            <!-- <li>排気量：<input type="text" name="car_displacement"></li> -->
+            <li>
+            排気量：<select name="car_displacement">
+                <option value="1000cc未満">1000cc未満</option>
+                <option value="1000cc以上1500cc未満">1000cc以上1500cc未満</option>
+                <option value="1500cc以上2000cc未満">1500cc以上2000cc未満</option>
+                <option value="2000cc以上3000cc未満">2000cc以上3000cc未満</option>
+                <option value="3000cc以上4000cc未満">3000cc以上4000cc未満</option>
+                <option value="4000cc以上">4000cc以上</option>
+            </li>
             <li>モデル：<input type="text" name="car_model"></li>
             <li>グレード：<input type="text" name="car_grade"></li>
             <li>メーカー：<input type="text" name="car_maker"></li>
