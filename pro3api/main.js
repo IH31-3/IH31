@@ -5,9 +5,15 @@
 /////////////////////////////////////////////////////////////////////////////
 var startDate = '2020/01/01';  //オークション開催日
 
-var startHour = 22;  //オークション開催時刻　時(13時)
+// 日付時間設定
+require('date-utils');
+var dt = new Date();
+var formatted_hour = Number(dt.toFormat("HH24")); // int変換込み
+var formatted_min = Number(dt.toFormat("MI")); // int変換込み
+
+var startHour = formatted_hour;  //オークション開催時刻　時(13時)
 var auctionTime = 10; //オークションの開催時間 　分(10)
-var buffMinutues = 17;  //オークションの開催時刻　分（0）　デバック用
+var buffMinutues = formatted_min;  //オークションの開催時刻　分（0）　デバック用
 
 ////////////////////////////////////////////////////////////////////////////
 const express = require('express');
