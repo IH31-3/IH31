@@ -1,16 +1,26 @@
-<main>
+<main class="regist_auction">
     <h2>オークション登録</h2>
     <form action="" method="post">
     <input type="hidden" name="type" value="regist_auction">
+    <div class="search_columns">
         <ul>
             <!-- <li>オークション番号：<input type="text" name="auction_id"></li> -->
-            <li>オークション名：<input type="text" name="auction_name"></li>
-            <li>日付：<input type="text" name="auction_date"></li>
-            <li>説明：<input type="textbox" name="auction_description"></li>
+            <li class="box_li">オークション名</li>
+            <li class="input_li"><input type="text" name="auction_name"></li>
         </ul>
-        <input type="submit" name="登録" value="登録する">
-        
+        <ul>
+            <li class="box_li">日付</li>
+            <li class="input_li"><input type="text" name="auction_date"></li>
+        </ul>
+        <ul>
+            <li class="box_li">説明</li>
+            <li class="input_li"><input type="textbox" name="auction_description"></li>
+        </ul>
+        <ul>
+            <li class="long_li"><button type="submit" name="page" value="done">登録する</button></li>
+        </ul>
+    </div>
     </form>
-    <a href="http://127.0.0.1/IH31/admin/index.php?page=regist_top">登録トップへ戻る</a>
+    <!-- <a href="http://127.0.0.1/IH31/admin/index.php?page=regist_top">登録トップへ戻る</a> -->
 </main>
 <!-- main ここまで -->
