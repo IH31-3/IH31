@@ -77,12 +77,17 @@
                         <dd>(修復歴)</dd>
                     </dl>
                 </div>
-                <dl>
-                    <dt>開始価格</dt>
-                    <dd>(開始価格価格)万円</dd>
-                    <dt>オークション予定日時</dt>
-                    <dd>(開始日時)〜(開始日時+10分)</dd>
-                </dl>
+
+                <div class="auction_info">
+                    <dl class="font_pink">
+                        <dt class="postit_pink">開始価格</dt>
+                        <dd class="bold"><span class="big center">(価格)</span>万円</dd>
+                    </dl>
+                    <dl>
+                        <dt class="postit_gray">オークション予定日時</dt>
+                        <dd>(開始日時)〜(開始日時+10分)</dd>
+                    </dl>
+                </div>
 
         </section>
 
