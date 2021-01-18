@@ -47,30 +47,51 @@
 
     <article>
         <h2 class="left border_bottom"><span class="back_pink">THIS WEEK</span>　　　<span class="font_gray font_size_middle">AUCTION LINEUP</span> <span class="pink_font"></span></h2>
-        
 
+        <!-- 繰り返し要素 -->
         <section class="car_sumnail">
-            <p><img src=""></p>
-            <h3>(メーカー)(車種名)</h3>
-            <dl>
-                <dt>年式</dt>
-                <dd>(年式)</dd>
-                <dt>走行量</dt>
-                <dd>(走行量)</dd>
-                <dt>排気量</dt>
-                <dd>(排気量)</dd>
-                <dt>車検</dt>
-                <dd>(車検)</dd>
-                <dt>修復歴</dt>
-                <dd>(修復歴)</dd>
-            </dl>
-            <dl>
-                <dt>開始価格</dt>
-                <dd>(開始価格価格)万円</dd>
-                <dt>オークション予定日時</dt>
-                <dd>(開始日時)〜(開始日時+10分)</dd>
-            </dl>
+            <div class="left_content">
+                <img src="./img/sample_car.png">
+            </div>
+            <div class="right_content">
+                <h3 class="bold">(メーカー) (車種名)</h3>
+                <div class="car_info">
+                    <dl>
+                        <dt class="back_gray center">年式</dt>
+                        <dd>(年式)</dd>
+                    </dl>
+                    <dl>
+                        <dt class="back_gray center">走行量</dt>
+                        <dd>(走行量)</dd>
+                    </dl>
+                    <dl>
+                        <dt class="back_gray center">排気量</dt>
+                        <dd>(排気量)</dd>
+                    </dl>
+                    <dl>
+                        <dt class="back_gray center">車検</dt>
+                        <dd>(車検)</dd>
+                    </dl>
+                    <dl>
+                        <dt class="back_gray center">修復歴</dt>
+                        <dd>(修復歴)</dd>
+                    </dl>
+                </div>
+
+                <div class="auction_info">
+                    <dl class="font_pink">
+                        <dt class="postit_pink">開始価格</dt>
+                        <dd class="bold"><span class="big center">(価格)</span>万円</dd>
+                    </dl>
+                    <dl>
+                        <dt class="postit_gray">オークション予定日時</dt>
+                        <dd>(開始日時)〜(開始日時+10分)</dd>
+                    </dl>
+                </div>
+
         </section>
+
+        <!-- ここまで繰り返し要素 -->
 
     </article>
 

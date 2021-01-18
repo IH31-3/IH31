@@ -30,8 +30,6 @@ main {
     margin-bottom: 270px;
 }
 
-
-
 #contentsA{
     width: 80%;
     max-width: 1000px;
@@ -89,6 +87,20 @@ main {
     color: #707070;
 }
 
+.back_gray{
+
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #EAE5E5;
+    font-size: 0.8rem;
+}
+
+.font_pink{
+    color: #EB7373;
+
+}
+
 .back_pink{
     background-color: #EB7373;
     line-height: 30px;
@@ -136,8 +148,94 @@ main {
     font-weight: 600;
 }
 
+.big{
+    font-size: 1.6rem;
+}
+
+.postit_gray{
+    border-left: solid 3px #707070;
+    padding-left: 10px;
+}
+
+.postit_pink{
+    border-left: solid 3px #EB7373;
+    padding-left: 10px;
+}
+
+
 /* car_sumnail */
 .car_sumnail{
+    margin: 0 auto;
+    margin-top: 25px;
+    border:solid 1px #707070;
+    box-shadow: 0 10px 10px 0 #82828280;
+    border-radius: 10px;
+    padding:10px;
+    height: 300px;
+    width: 70%;
+    max-width: 850px;
+    display: flex;
+
 
 }
+
+.car_sumnail .left_content img{
+    height: 250px;
+    width:250px;
+    vertical-align: center;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.car_sumnail .right_content{
+    margin-left: 50px;
+    margin-top: 25px;
+    width: 800px;
+    padding-right: 25px;
+}
+
+.car_sumnail .right_content h3{
+    font-size: 1.2rem;
+}
+
+.car_sumnail .car_info{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width:400px;
+}
+
+.car_info dd{
+    padding-top: 10px;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.auction_info{
+    border-top: solid 1px #707070;
+    padding-top: 20px;
+    margin-top: 20px;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    
+
+}
+
+.auction_info dt{
+    
+    height: 20px;
+    line-height: 20px;
+    
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.auction_info dd{
+    padding-top: 20px;
+    
+}
+
+
+
+
 
