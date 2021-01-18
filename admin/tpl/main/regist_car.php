@@ -19,7 +19,8 @@
             <li>車種名：<input type="text" name="car_type"></li>
             <!-- <li>車両形状：<input type="text" name="car_form"></li> -->
             <li>
-            車両形状：<select name="car_form">
+            車両形状：
+            <select name="car_form">
                 <option value="トラック">T：トラック</option>
                 <option value="バン">V：バン</option>
                 <option value="ハッチバック">HB：ハッチバック</option>
@@ -32,13 +33,14 @@
             </li>
             <!-- <li>排気量：<input type="text" name="car_displacement"></li> -->
             <li>
-            排気量：<select name="car_displacement">
-                <option value="1000cc未満">1000cc未満</option>
-                <option value="1000cc以上1500cc未満">1000cc以上1500cc未満</option>
-                <option value="1500cc以上2000cc未満">1500cc以上2000cc未満</option>
-                <option value="2000cc以上3000cc未満">2000cc以上3000cc未満</option>
-                <option value="3000cc以上4000cc未満">3000cc以上4000cc未満</option>
-                <option value="4000cc以上">4000cc以上</option>
+            排気量：
+            <select name="car_displacement">
+                <option value="1000">1000cc未満</option>
+                <option value="1500">1000cc以上1500cc未満</option>
+                <option value="2000">1500cc以上2000cc未満</option>
+                <option value="3000">2000cc以上3000cc未満</option>
+                <option value="4000">4000cc以上</option>
+            </select>
             </li>
             <li>モデル：<input type="text" name="car_model"></li>
             <li>グレード：<input type="text" name="car_grade"></li>
