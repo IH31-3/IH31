@@ -20,7 +20,7 @@ function regist_employee(){
 
 //車両登録
 function regist_car(){
-    var_dump("test");
+    //var_dump("test");
     $car_no = $_POST["car_no"];
     $model_year = $_POST["model_year"];
     $car_type = $_POST["car_type"];
@@ -78,10 +78,11 @@ function regist_car(){
     $cn = new mysqli(MYSQL_HOST,MYSQL_USER,MYSQL_PASS,DB_NAME);
     $cn -> set_charset('utf8');
 
-    $sql = "INSERT INTO vehicle(employee_no,model_year,model_name,shape,displacement,model,grade,maker,fuel,vehicle_model,capacity,drive_system,mileage,exterior_color,Interior_color,nox_deadline,Inspection_deadline,name_change_deadline,airbag,car_history,classification_classification_number,repair_history,evaluation_points,exterior_evaluation,interior_evaluation,purchase_amount,situation_comment,appeal_point)
+    $sql = "INSERT INTO vehicle(vehicle_no,model_year,model_name,shape,displacement,model,grade,maker,fuel,vehicle_model,capacity,drive_system,mileage,exterior_color,Interior_color,nox_deadline,Inspection_deadline,name_change_deadline,airbag,car_history,classification_classification_number,repair_history,evaluation_points,exterior_evaluation,interior_evaluation,purchase_amount,situation_comment,appeal_point)
     VALUES(" . $car_no . ",'" . $model_year . "','" . $car_type . "','" . $car_form . "','" . $car_displacement . "','" . $car_model . "','" . $car_grade . "','" . $car_maker . "','" . $car_fuel . "','" . $car_format . "','" . $car_capacity . "','" . $car_system . "','" . $car_mileage . "','" . $car_outer_color . "','" . $car_inner_color . "','" . $car_nox_limit . "','" . $car_check_limit . "','" . $car_namechange_limit . "',
     '" . $car_airbag . "','" . $car_history . "','" . $car_type_no . "','" . $car_repair_history . "','" . $car_evaluation_point . "','" . $car_outer_point . "','" . $car_inner_point . "','" . $car_wholesale . "','" . $car_status_comment . "','" . $car_appeal_comment . "');";
 
+    var_dump($sql);
     mysqli_query($cn, $sql);
     mysqli_close($cn);
     //var_dump($sql);
