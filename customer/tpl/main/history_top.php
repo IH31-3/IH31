@@ -4,26 +4,26 @@
     </div>
 
     <article>
-        <h2><img src="./img/HALMOTOR.png" width="280px">とは</h2>
-        <p>大阪で展開している中古車販売企業です。<br>
+        <h2><img src="./img/HALMOTOR.png" width="280px">　とは</h2>
+        <p class="center lheight">大阪で展開している中古車販売企業です。<br>
             土曜日に当サイトでオークションを行っています！<br>
             契約に必要な書類もお車も、すべてご自宅にお届けします！<br>
             とっても便利な中古車オークションサイトです。</p>
         <section>
-            <p><img src=""></p>
+            <p><img src="./img/ex1.png"></p>
             <h3>ネットで入札</h3>
             <p>簡単・スピーディ！
                 どこにいても入札可能！</p>
         </section>
         <section>
-            <p><img src=""></p>
+            <p><img src="./img/ex2.png"></p>
             <h3>ネットで取引情報チェック</h3>
             <p>ネットで注文状況チェック！
                 いつでも安心！
             </p>
         </section>
         <section>
-            <p><img src=""></p>
+            <p><img src="./img/ex3.png"></p>
             <h3>自宅に届く</h3>
             <p>必要な書類からお車まで、
                 すべてご自宅にお届けします！</p>
