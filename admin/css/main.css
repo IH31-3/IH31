@@ -2,19 +2,20 @@ main {
     position: absolute;
     top: 80px;
     width: 100vw;
-    height: 840px;
+    height: 1200px;
 }
-
+/********************************* 案件トップ *********************************/
+/********************** 検索のとこ **********************/
 .matter_top {
     width: 100vw;
-    height: 840px;
     padding: 40px;
-    border: solid #808080 1px;
+    /* border: solid #808080 1px; */
 }
 
 .matter_top h2 {
     border-left: solid #83D3B7 6px;
     padding-left: 20px;
+    line-height: 40px;
 }
 
 .matter_top .select_button {
@@ -86,7 +87,7 @@ main {
     border-radius: 6px;
 }
 
-/****************************** 案件情報一覧のとこ ******************************/
+/********************** 案件情報一覧のとこ **********************/
 
 .matter_top h2:nth-child(3) {
     margin-top: 30px;
@@ -123,3 +124,71 @@ main {
     /* background-color: rgba(255,0,0, 0.2); */
 }
 
+
+/********************************* 案件詳細 *********************************/
+/********************** 案件詳細のとこ **********************/
+.matter_detail {
+    width: 100vw;
+    padding: 40px;
+}
+
+.matter_detail .images{
+    list-style: none;
+    display: table;
+    /* border-right: solid #808080 1px; */
+    margin-left: 10px;
+    width: 720px;
+}
+
+.matter_detail .images li{
+    display: table-cell;
+    text-align: center;
+}
+
+.matter_detail .images li img {
+    width: 160px;
+    height: 170px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+
+/********************** 案件詳細情報のとこ **********************/
+
+.matter_detail h2 {
+    border-left: solid #83D3B7 6px;
+    padding-left: 20px;
+    line-height: 40px;
+    margin-bottom:20px;
+    border-bottom: solid #42A382 2px;
+}
+
+.matter_detail .data {
+    border-top: solid #808080 1px;
+    width: 720px;
+}
+
+.matter_detail .data ul{
+    list-style: none;
+    display: table;
+    border-right: solid #808080 1px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.matter_detail .data li{
+    display: table-cell;
+    text-align: center;
+    width: 240px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+
+    /* color: red; */
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.matter_detail .data li:nth-child(2n){
+    width: 480px;
+}
