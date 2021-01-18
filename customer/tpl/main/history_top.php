@@ -78,6 +78,7 @@
                     </dl>
                 </div>
 
+                <a href="http://127.0.0.1/IH31/customer/index.php?page=auction_top">
                 <div class="auction_info">
                     <dl class="font_pink">
                         <dt class="postit_pink">開始価格</dt>
@@ -88,6 +89,7 @@
                         <dd>(開始日時)〜(開始日時+10分)</dd>
                     </dl>
                 </div>
+                </a>
 
         </section>
 
