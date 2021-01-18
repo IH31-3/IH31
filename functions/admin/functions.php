@@ -76,7 +76,7 @@ function regist_car(){
     // 別名で保存
     for($i=0;$i<4;$i++):
         // 画像保存先パスの生成・保存
-        $image_path = "../pro3api/car_img/" . $car_no . "_" . $i . ".jpg";
+        $image_path = "../pro3api/public/car_img/" . $car_no . "_" . $i . ".jpg";
         move_uploaded_file($images[$i]["tmp_name"], $image_path);
     endfor;
     // 画像名は、
@@ -98,10 +98,10 @@ function regist_car(){
     // var_dump($sql);
 
     $result = [
-        "<p><img src='../pro3api/car_img/" . $car_no . "_0.jpg' height='250', width='250'></p>",
-        "<p><img src='../pro3api/car_img/" . $car_no . "_1.jpg' height='250', width='250'></p>",
-        "<p><img src='../pro3api/car_img/" . $car_no . "_2.jpg' height='250', width='250'></p>",
-        "<p><img src='../pro3api/car_img/" . $car_no . "_3.jpg' height='250', width='250'></p>",
+        "<p><img src='../pro3api/public/car_img/" . $car_no . "_0.jpg' height='250', width='250'></p>",
+        "<p><img src='../pro3api/public/car_img/" . $car_no . "_1.jpg' height='250', width='250'></p>",
+        "<p><img src='../pro3api/public/car_img/" . $car_no . "_2.jpg' height='250', width='250'></p>",
+        "<p><img src='../pro3api/public/car_img/" . $car_no . "_3.jpg' height='250', width='250'></p>",
         $car_no,
         $model_year,
         $car_type,
@@ -140,11 +140,11 @@ function regist_exhibit(){
     $auction_id = $_POST["auction_id"];
 
     // db接続sql実行してください。
-    // $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
-    // mysqli_set_charset($cn, 'utf8');
-    // $sql = "INSERT INTO listing(vehicle_no,auction_no)VALUES(" . $car_id . ",'" . $auction_id . "');";
-    // mysqli_query($cn, $sql);
-    // mysqli_close($cn);
+    $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
+    mysqli_set_charset($cn, 'utf8');
+    $sql = "INSERT INTO listing(vehicle_no,auction_no)VALUES(" . $car_id . ",'" . $auction_id . "');";
+    mysqli_query($cn, $sql);
+    mysqli_close($cn);
     
     $result = [
         $car_id,
@@ -163,11 +163,11 @@ function regist_matter(){
     $car_status = $_POST["car_status"];
 
     // db接続sql実行してください。
-    // $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
-    // mysqli_set_charset($cn, 'utf8');
-    // $sql = "INSERT INTO matter(status,client_no,employee_no,vehicle_no,money)VALUES('" . $customer_id . "','" . $employee_id . "','" . $car_id . "','" . $car_price . "','" . $car_status . "');";
-    // mysqli_query($cn, $sql);
-    // mysqli_close($cn);
+    $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
+    mysqli_set_charset($cn, 'utf8');
+    $sql = "INSERT INTO matter(status,client_no,employee_no,vehicle_no,money)VALUES('" . $customer_id . "','" . $employee_id . "','" . $car_id . "','" . $car_price . "','" . $car_status . "');";
+    mysqli_query($cn, $sql);
+    mysqli_close($cn);
 
 
     $result = [
@@ -189,11 +189,11 @@ function regist_auction(){
     $auction_description = $_POST["auction_description"];
 
     // db接続sql実行してください。
-    // $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
-    // mysqli_set_charset($cn, 'utf8');
-    // $sql = "INSERT INTO auction(auction_no,date,explanation,auction_name)VALUES(" . $auction_id . ",'" . $auction_date . "','" . $auction_description . "','" . $auction_name . "');";
-    // mysqli_query($cn, $sql);
-    // mysqli_close($cn);
+    $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
+    mysqli_set_charset($cn, 'utf8');
+    $sql = "INSERT INTO auction(auction_no,date,explanation,auction_name)VALUES(" . $auction_id . ",'" . $auction_date . "','" . $auction_description . "','" . $auction_name . "');";
+    mysqli_query($cn, $sql);
+    mysqli_close($cn);
 
     $result = [
         $auction_id,
