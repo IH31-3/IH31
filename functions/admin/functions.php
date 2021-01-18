@@ -13,11 +13,12 @@ function load_page_source() {
     return $const;
 }
 // --------------- 検索系 --------------- //
+// 案件検索
 function search_matter(){
 
     $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
     mysqli_set_charset($cn, 'utf8');
-    $sql = "select matter_no, status, client.client_name, employee.employee_name, vehicle_no, money 
+    $sql = "SELECT matter_no, status, client.client_name, employee.employee_name, vehicle_no, money 
             FROM matter
             INNER JOIN client ON matter.client_no = client.client_no 
             INNER JOIN employee ON matter.employee_no = employee.employee_no
@@ -26,11 +27,35 @@ function search_matter(){
     mysqli_close($cn);
 
     $result = [];
-    while($row = mysql_fetch_assoc($sql_result)){
+    
+    while($row = mysqli_fetch_assoc($sql_result)){
         $result[] = $row;
     }
     return $result;
 }
+
+// 案件詳細検索
+function search_matter_detail($id){
+
+    $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
+    mysqli_set_charset($cn, 'utf8');
+    $sql = "SELECT * , client.client_name, employee.employee_name
+    FROM matter
+    INNER JOIN vehicle ON vehicle.vehicle_no = matter.vehicle_no
+    INNER JOIN client ON client.client_no = matter.client_no
+    INNER JOIN employee ON employee.employee_no = matter.employee_no
+    WHERE matter_no = " . $id . ";";
+    $sql_result = mysqli_query($cn, $sql);
+    mysqli_close($cn);
+
+    $result = [];
+    while($row = mysqli_fetch_assoc($sql_result)){
+        $result[] = $row;
+    }
+    return $result;    
+}
+
+
 // --------------- 登録系 --------------- //
 // 従業員登録
 function regist_employee(){

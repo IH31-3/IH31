@@ -18,22 +18,20 @@
     <br>
 
     <h2>検索結果</h2>
-    <ul>
-        <?php for($i=8; 0<$i; $i--): ?>
-            <!-- <li><?= "ID:".$i ?></li> -->
-            <li><?= "担当者名:"."木原天" ?></li>
-            <li><?= "顧客名:"."木原天" ?></li>
-            <li><?= "車両番号:"."0001" ?></li>
-            <li><?= "車種名:"."セダン" ?></li>
-            <!-- <li><?= "金額:"."10000000" ?></li> -->
-            <li><?= "状態:"."入金待ち" ?></li>
-            <!-- <li><?= "更新日時:"."2021/01/".$i." 12:30:00"?></li> -->
-            <li><a href="http://127.0.0.1/IH31/admin/index.php?page=matter_detail&id=<?= $i ?>">詳細へ</a></li>
 
-            <br>
+    <?php foreach($result as $column): ?>
+        <ul>
+            <li><?= "担当者名:".$column["employee_name"] ?></li>
+            <li><?= "顧客名:".$column["client_name"] ?></li>
+            <li><?= "車両番号:".$column["vehicle_no"] ?></li>
+            <li><?= "状態:".$column["status"] ?></li>
+            <li><?= "金額:".$column["money"] ?></li>
+            <li><a href="http://127.0.0.1/IH31/admin/index.php?page=matter_detail&id=<?= $column["matter_no"] ?>">詳細へ</a></li>
+        </ul>
 
-        <?php endfor ?>
-    </ul>
+        <br>
+
+    <?php endforeach ?>
 
     <a href="http://127.0.0.1/IH31/admin/index.php">トップへ戻る</a>
 </main>
