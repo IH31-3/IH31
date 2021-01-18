@@ -1,9 +1,6 @@
 <?php
 require("../../config.php");
-require("./Login.php");
-require("./Modify.php");
-require("./Search.php");
-require("./SignUp.php");
+require("../admin/functions.php");
 
 class AdminMain{
     function load_page_source() {
