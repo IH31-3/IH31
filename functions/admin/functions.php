@@ -12,7 +12,51 @@ function load_page_source() {
     ];
     return $const;
 }
+// --------------- 検索系 --------------- //
+// 案件検索
+function search_matter(){
 
+    $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
+    mysqli_set_charset($cn, 'utf8');
+    $sql = "SELECT matter_no, status, client.client_name, employee.employee_name, vehicle_no, money 
+            FROM matter
+            INNER JOIN client ON matter.client_no = client.client_no 
+            INNER JOIN employee ON matter.employee_no = employee.employee_no
+            ORDER BY matter_no DESC;";
+    $sql_result = mysqli_query($cn, $sql);
+    mysqli_close($cn);
+
+    $result = [];
+    
+    while($row = mysqli_fetch_assoc($sql_result)){
+        $result[] = $row;
+    }
+    return $result;
+}
+
+// 案件詳細検索
+function search_matter_detail($id){
+
+    $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
+    mysqli_set_charset($cn, 'utf8');
+    $sql = "SELECT * , client.client_name, employee.employee_name
+    FROM matter
+    INNER JOIN vehicle ON vehicle.vehicle_no = matter.vehicle_no
+    INNER JOIN client ON client.client_no = matter.client_no
+    INNER JOIN employee ON employee.employee_no = matter.employee_no
+    WHERE matter_no = " . $id . ";";
+    $sql_result = mysqli_query($cn, $sql);
+    mysqli_close($cn);
+
+    $result = [];
+    while($row = mysqli_fetch_assoc($sql_result)){
+        $result[] = $row;
+    }
+    return $result;    
+}
+
+
+// --------------- 登録系 --------------- //
 // 従業員登録
 function regist_employee(){
     $id = $_POST["employee_id"];
@@ -155,7 +199,7 @@ function regist_exhibit(){
 
 // 案件登録
 function regist_matter(){
-    $matter_id = $_POST["matter_id"];
+    // $matter_id = $_POST["matter_id"];
     $customer_id = $_POST["customer_id"];
     $employee_id = $_POST["employee_id"];
     $car_id = $_POST["car_id"];
@@ -183,7 +227,7 @@ function regist_matter(){
 
 // オークション登録
 function regist_auction(){
-    $auction_id = $_POST["auction_id"];
+    // $auction_id = $_POST["auction_id"];
     $auction_name = $_POST["auction_name"];
     $auction_date = $_POST["auction_date"];
     $auction_description = $_POST["auction_description"];
