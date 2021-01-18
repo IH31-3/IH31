@@ -3,7 +3,7 @@
     <form action="" method="post">
     <input type="hidden" name="type" value="regist_auction">
         <ul>
-            <li>オークション番号：<input type="text" name="auction_id"></li>
+            <!-- <li>オークション番号：<input type="text" name="auction_id"></li> -->
             <li>オークション名：<input type="text" name="auction_name"></li>
             <li>日付：<input type="text" name="auction_date"></li>
             <li>説明：<input type="textbox" name="auction_description"></li>
