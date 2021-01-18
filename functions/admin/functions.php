@@ -20,11 +20,11 @@ function regist_employee(){
     $passwd = $_POST["employee_passwd"];
 
     // db接続sql実行してください。
-    // $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
-    // mysqli_set_charset($cn, 'utf8');
-    // $sql = "INSERT INTO employee(employee_no,employee_name,password)VALUES(" . $id . ",'" . $name . "','" . $passwd . "');";
-    // mysqli_query($cn, $sql);
-    // mysqli_close($cn);
+    $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
+    mysqli_set_charset($cn, 'utf8');
+    $sql = "INSERT INTO employee(employee_no,employee_name,password)VALUES(" . $id . ",'" . $name . "','" . $passwd . "');";
+    mysqli_query($cn, $sql);
+    mysqli_close($cn);
 
     $result = [
         $id, 
@@ -88,13 +88,13 @@ function regist_car(){
     // 車体NOだけわかれば表示できるので、画像パスはDB保存しなくて大丈夫です。
 
     // db接続sql実行してください。
-    // $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
-    // mysqli_set_charset($cn, 'utf8');
-    // $sql = "INSERT INTO vehicle(vehicle_no,model_year,model_name,shape,displacement,model,grade,maker,fuel,vehicle_model,capacity,drive_system,mileage,exterior_color,Interior_color,nox_deadline,Inspection_deadline,name_change_deadline,airbag,car_history,classification_classification_number,repair_history,evaluation_points,exterior_evaluation,interior_evaluation,purchase_amount,situation_comment,appeal_point)
-    // VALUES(" . $car_no . ",'" . $model_year . "','" . $car_type . "','" . $car_form . "','" . $car_displacement . "','" . $car_model . "','" . $car_grade . "','" . $car_maker . "','" . $car_fuel . "','" . $car_format . "','" . $car_capacity . "','" . $car_system . "','" . $car_mileage . "','" . $car_outer_color . "','" . $car_inner_color . "','" . $car_nox_limit . "','" . $car_check_limit . "','" . $car_namechange_limit . "',
-    // '" . $car_airbag . "','" . $car_history . "','" . $car_type_no . "','" . $car_repair_history . "','" . $car_evaluation_point . "','" . $car_outer_point . "','" . $car_inner_point . "','" . $car_wholesale . "','" . $car_status_comment . "','" . $car_appeal_comment . "');";
-    // mysqli_query($cn, $sql);
-    // mysqli_close($cn);
+    $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
+    mysqli_set_charset($cn, 'utf8');
+    $sql = "INSERT INTO vehicle(vehicle_no,model_year,model_name,shape,displacement,model,grade,maker,fuel,vehicle_model,capacity,drive_system,mileage,exterior_color,Interior_color,nox_deadline,Inspection_deadline,name_change_deadline,airbag,car_history,classification_classification_number,repair_history,evaluation_points,exterior_evaluation,interior_evaluation,purchase_amount,situation_comment,appeal_point)
+    VALUES(" . $car_no . ",'" . $model_year . "','" . $car_type . "','" . $car_form . "','" . $car_displacement . "','" . $car_model . "','" . $car_grade . "','" . $car_maker . "','" . $car_fuel . "','" . $car_format . "','" . $car_capacity . "','" . $car_system . "','" . $car_mileage . "','" . $car_outer_color . "','" . $car_inner_color . "','" . $car_nox_limit . "','" . $car_check_limit . "','" . $car_namechange_limit . "',
+    '" . $car_airbag . "','" . $car_history . "','" . $car_type_no . "','" . $car_repair_history . "','" . $car_evaluation_point . "','" . $car_outer_point . "','" . $car_inner_point . "','" . $car_wholesale . "','" . $car_status_comment . "','" . $car_appeal_comment . "');";
+    mysqli_query($cn, $sql);
+    mysqli_close($cn);
     // var_dump($sql);
 
     $result = [
