@@ -23,12 +23,15 @@ if(isset($_GET["page"])){ // ----- ページ遷移用
         // statusとtextで案件検索、結果を配列でmatter_topにて表示する
         //値取得
         $result = search_matter();
+
+        // var_dump($result);
     }
 
     // 案件詳細表示
     if($page=="matter_detail"){
         $id = $_GET["id"];
-        // 案件詳細表示用にmatter_topからid取得、matter_detailにて表示する
+        $result = search_matter_detail($id);
+        // var_dump($result);
     }
 
     // 出品登録画面表示のselect用オークション一覧表示

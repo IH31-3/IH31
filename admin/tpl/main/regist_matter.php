@@ -3,7 +3,7 @@
     <form action="" method="post">
     <input type="hidden" name="type" value="regist_matter">
         <ul>
-            <li>案件id：<input type="text" name="matter_id"></li>
+            <!-- <li>案件id：<input type="text" name="matter_id"></li> -->
             <li>顧客id：<input type="text" name="customer_id"></li>
             <li>担当従業員id：<input type="text" name="employee_id"></li>
             <li>車両番号：<input type="text" name="car_id"></li>

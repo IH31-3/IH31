@@ -1,0 +1,23 @@
+main {
+    width: 100%;
+    
+}
+#history_top #main_image img{
+    width:100%
+
+}
+
+#history_top h2:nth-child(1){
+    text-align: center;
+    margin: 60px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.center{
+    text-align: center;
+}
+
+.lheight{
+    line-height: 30px;
+}
