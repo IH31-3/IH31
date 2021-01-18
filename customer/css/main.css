@@ -41,20 +41,48 @@ main {
     margin-bottom: 120px;
 }
 
+/* auction_top */
+.status{
+    padding-top: 40px;
+    width: 50%;
+    max-width: 850px;
+    margin:0 auto;
+    text-align: center;
+    font-weight: 600;
+}
+
+.buttons{
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* global */
 .btn1{
     letter-spacing: 0px;
-    height:40px;
+    height:80px;
     line-height: 20px;
     width: 300px;
     text-align: center;
-    padding: 40px;
+    padding: 30px;
     background-color: #EB7373;
     color: #ffffff;
     border-radius: 10px;
     margin:0 auto;
     
     
+}
 
+.btn2{
+    letter-spacing: 0px;
+    height:80px;
+    line-height: 20px;
+    width: 300px;
+    text-align: center;
+    padding: 30px;
+    background-color: #707070;
+    color: #ffffff;
+    border-radius: 10px;
+    margin:0 auto;
 }
 
 .border_bottom{
@@ -75,7 +103,7 @@ main {
     border-radius: 20px;
 }
 
-/* global */
+
 
 .font_blue{
     font-size: 1.1rem;
@@ -160,6 +188,38 @@ main {
 .postit_pink{
     border-left: solid 3px #EB7373;
     padding-left: 10px;
+}
+
+.auto_center{
+    margin: 0 auto;
+    
+}
+
+.mgn_top40{
+    margin-top: 40px;
+    
+}
+
+.before{
+    color: #EB7373;
+    font-weight: 500;
+    padding:10px;
+
+}
+
+.now{
+    width: auto;
+    color: white;
+    background-color: #E8C91C;
+    font-weight: 500;
+    padding:10px;
+
+}
+
+.after{
+    background-color: #707070;
+    color: #ffffff;
+    padding:10px;
 }
 
 

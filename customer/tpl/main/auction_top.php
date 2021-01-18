@@ -1,6 +1,5 @@
 <main id="auction_top">
-    <h2>AUCTION</h2>
-    <h2>現在開催中のオークション</h2>
+    <h2 class="mgn_top40 auto_center left border_bottom font_gray font_size_middle bold">AUCTION</h2>
 
     <!-- article繰り返す -->
     <article>
@@ -12,31 +11,55 @@
             <p class="after">オークション終了</p>
             <!--開始後-->
         </div>
-        <section class="car_sumnail">
-            <p><img src=""></p>
-            <h3>(メーカー)(車種名)</h3>
-            <dl>
-                <dt>年式</dt>
-                <dd>(年式)</dd>
-                <dt>走行量</dt>
-                <dd>(走行量)</dd>
-                <dt>排気量</dt>
-                <dd>(排気量)</dd>
-                <dt>車検</dt>
-                <dd>(車検)</dd>
-                <dt>修復歴</dt>
-                <dd>(修復歴)</dd>
-            </dl>
-            <dl>
-                <dt>開始価格</dt>
-                <dd>(開始価格価格)万円</dd>
-                <dt>オークション予定日時</dt>
-                <dd>(開始日時)〜(開始日時+10分)</dd>
-            </dl>
-        </section>
 
-        <p class="enter_button pink"><a href="<?= $auction_bid_url ?>">この車両に入札する</a></p><!--開催中-->
-        <p class="enter_button">この車両に入札する</p><!--開催中以外-->
+        <section class="car_sumnail">
+            <div class="left_content">
+                <img src="./img/sample_car.png">
+            </div>
+            <div class="right_content">
+                <h3 class="bold">(メーカー) (車種名)</h3>
+                <div class="car_info">
+                    <dl>
+                        <dt class="back_gray center">年式</dt>
+                        <dd>(年式)</dd>
+                    </dl>
+                    <dl>
+                        <dt class="back_gray center">走行量</dt>
+                        <dd>(走行量)</dd>
+                    </dl>
+                    <dl>
+                        <dt class="back_gray center">排気量</dt>
+                        <dd>(排気量)</dd>
+                    </dl>
+                    <dl>
+                        <dt class="back_gray center">車検</dt>
+                        <dd>(車検)</dd>
+                    </dl>
+                    <dl>
+                        <dt class="back_gray center">修復歴</dt>
+                        <dd>(修復歴)</dd>
+                    </dl>
+                </div>
+
+                <div class="auction_info">
+                    <dl class="font_pink">
+                        <dt class="postit_pink">開始価格</dt>
+                        <dd class="bold"><span class="big center">(価格)</span>万円</dd>
+                    </dl>
+                    <dl>
+                        <dt class="postit_gray">オークション予定日時</dt>
+                        <dd>(開始日時)〜(開始日時+10分)</dd>
+                    </dl>
+                </div>
+
+        </section>
+        <div class="buttons">
+            <p class="btn1"><a class=" view_center" href="<?= $auction_bid_url ?>"><span class="padding_img"><img src="./img/auction.png" width="20px"></span>このオークションに参加する</a></p>
+            <!--開催中-->
+
+            <!-- <p class="btn2"><span class="padding_img"><img src="./img/auction.png" width="20px"></span> このオークションに参加する</p> -->
+            <!--開催中以外-->
+        </div>
 
 
     </article>
