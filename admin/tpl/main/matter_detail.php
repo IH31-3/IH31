@@ -7,7 +7,7 @@
         <li><img src="../pro3api/public/car_img/<?= $result[0]['vehicle_no'] ?>_3.jpg", height="200", width="200"></li>
     </ul>
 
-    <ul class="images">
+    <!-- <ul class="images">
         <li><img src="../pro3api/public/car_img/<?= $result[0]['vehicle_no'] ?>_0.jpg", height="200", width="200"></li>
         <li><img src="../pro3api/public/car_img/<?= $result[0]['vehicle_no'] ?>_1.jpg", height="200", width="200"></li>
         <li><img src="../pro3api/public/car_img/<?= $result[0]['vehicle_no'] ?>_2.jpg", height="200", width="200"></li>
@@ -26,7 +26,7 @@
         <li><img src="../pro3api/public/car_img/<?= $result[0]['vehicle_no'] ?>_1.jpg", height="200", width="200"></li>
         <li><img src="../pro3api/public/car_img/<?= $result[0]['vehicle_no'] ?>_2.jpg", height="200", width="200"></li>
         <li><img src="../pro3api/public/car_img/<?= $result[0]['vehicle_no'] ?>_3.jpg", height="200", width="200"></li>
-    </ul>
+    </ul> -->
 
 <div class="data">
     <ul>

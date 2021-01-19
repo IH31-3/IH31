@@ -4,3 +4,340 @@ main {
     /* background-color: green;
     color: red; */
 }
+
+.border_bottom{
+    
+    border-bottom: solid 1px #707070;
+    width: 70%;
+    max-width: 1000px;
+    padding: 10px;
+    
+}
+
+/* global */
+.btn1{
+    letter-spacing: 0px;
+    height:80px;
+    line-height: 20px;
+    width: 300px;
+    text-align: center;
+    padding: 30px;
+    background-color: #EB7373;
+    color: #ffffff;
+    border-radius: 10px;
+    margin:0 auto;
+    
+    
+}
+
+.btn2{
+    letter-spacing: 0px;
+    height:80px;
+    line-height: 20px;
+    width: 300px;
+    text-align: center;
+    padding: 30px;
+    background-color: #707070;
+    color: #ffffff;
+    border-radius: 10px;
+    margin:0 auto;
+}
+
+.btn3{
+    letter-spacing: 0px;
+    height:60px;
+    line-height: 30px;
+    width: 250px;
+    text-align: center;
+    padding: 15px;
+    background-color: #EB7373;
+    color: #ffffff;
+    border-radius: 10px;
+    margin:0 auto;
+    margin-top: 30px;
+    
+    
+}
+
+.border_bottom{
+    
+    border-bottom: solid 1px #707070;
+    width: 70%;
+    max-width: 1000px;
+    padding: 10px;
+    
+}
+
+
+.contA{
+    width: 300px;
+    height: 330px;
+    border:solid 1px #707070;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+
+
+.font_blue{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #283C8E;
+}
+
+.font_gray{
+    color: #707070;
+}
+
+.font_gray2{
+    color: #4e4e4e;
+}
+
+.back_gray{
+
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #EAE5E5;
+    font-size: 0.8rem;
+}
+
+.back_yellow{
+    color: #ffffff;
+    background-color: #e6dc58;
+    padding:3px;
+    text-align: center;
+    margin-left: 30px;
+    
+}
+
+.font_pink{
+    color: #EB7373;
+
+}
+
+.back_pink{
+    background-color: #EB7373;
+    line-height: 30px;
+    margin:0 auto;
+    width: 100px;
+    height: 40px;
+    padding:6px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.font_size_middle{
+    font-size: 1.2rem;
+}
+
+.center{
+    text-align: center;
+}
+
+.flex_center{
+    display: flex;
+    justify-content: center;
+}
+
+.left{
+    text-align: left;
+}
+
+.view_cemter{
+    
+    margin: 0 auto;
+    
+}
+
+.lheight{
+    line-height: 30px;
+}
+
+.bottom30{
+    padding-bottom: 30px;
+}
+
+.out_line{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.big{
+    font-size: 1.6rem;
+}
+
+.postit_gray{
+    border-left: solid 3px #707070;
+    padding-left: 10px;
+}
+
+.postit_pink{
+    border-left: solid 3px #EB7373;
+    padding-left: 10px;
+}
+
+.auto_center{
+    margin: 0 auto;
+    
+}
+
+.mgn_top40{
+    margin-top: 40px;
+    
+}
+
+.width{
+    width: 1000px;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mgn_bottom40{
+    margin-bottom: 40px;
+    
+}
+.mgn_bottom20{
+    margin-bottom: 20px;
+    
+}
+
+#img_area #main_img{
+    background-color: #EB7373;
+    width: 600px;
+    height: 600px;
+    margin-bottom: 20px;
+}
+
+#img_area #main_img img{
+    width: 600px;
+    height: 600px;
+} 
+
+#annotation{
+    margin: 35px;
+}
+
+
+#contents_wrap{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#img_area{
+    width: 600px;
+    max-width: 1000px;
+    
+}
+
+#auction_info_input{
+    width: 450px;
+    
+    border: solid 1px #707070;
+    margin-left:75px;
+    box-shadow: 0 10px 25px 0 #a5a5a580;
+    padding-top:30px;
+    margin-bottom: 50px;
+    
+}
+
+#auction_info{
+    width: 400px;
+}
+
+#car_info_wrap{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#car_detail h3{
+    margin-bottom: 30px;
+}
+
+table{
+    border: solid 1px #4e4e4e;
+    width: 720px;
+    margin-bottom: 30px;
+}
+
+.img_cont{
+
+    width: 190px;
+    height: 190px;
+    background-color: #707070;
+}
+
+.img_cont img{
+    width: 190px;
+    height: 190px;
+}
+
+.frame{
+    border: solid 1px #4e4e4e;
+    margin: 35px;
+    box-shadow: 0 10px 25px 0 #a5a5a580;
+
+    
+}
+
+.frame h4{
+    padding: 18px 0px;
+    text-align: center;
+    border-bottom:solid 1px #4e4e4e ;
+    color: #ffffff;
+    
+}
+
+.frame p{
+    padding: 20px;
+    font-size: 2rem;
+}
+
+
+
+.frame_gray{
+    background-color: #707070;
+}
+
+.gray{
+    color: #4e4e4e;
+}
+
+.frame_pink{
+    background-color: #EB7373;
+}
+
+.pink{
+    color: #EB7373;
+}
+
+.frame_blue{
+    background-color: #283C8E;
+}
+
+.blue{
+    color: #283C8E;
+}
+
+able{
+    margin-bottom: 100px;
+}
+
+td{
+    padding:20px;
+    border-bottom:solid 1px #000 ;
+    text-align: center;
+}
+
+td:first-child{
+    border-right: solid 1px #000;
+    background-color: #dadada;
+}
