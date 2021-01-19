@@ -1,6 +1,7 @@
 <?php
 require_once '../config.php';
 require_once '../functions/admin/reqistration.php';
+require_once '../functions/admin/detail_matter.php';
 require_once '../functions/archived/select.php';
 
 function load_page_source() {
