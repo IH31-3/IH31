@@ -57,7 +57,7 @@
             <p class="btn1"><a class=" view_center" href="<?= $auction_bid_url ?>"><span class="padding_img"><img src="./img/auction.png" width="20px"></span>このオークションに参加する</a></p>
             <!--開催中-->
 
-            <!-- <p class="btn2"><span class="padding_img"><img src="./img/auction.png" width="20px"></span> このオークションに参加する</p> -->
+            <p class="btn2"><span class="padding_img"><img src="./img/auction.png" width="20px"></span> このオークションに参加する</p>
             <!--開催中以外-->
         </div>
 
