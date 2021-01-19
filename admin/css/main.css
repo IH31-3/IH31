@@ -332,3 +332,239 @@ main {
     color:white;
     border-radius: 6px;
 }
+
+/********************************* 車両登録 *********************************/
+.regist_car {
+    width: 100vw;
+    padding: 40px;
+    /* border: solid #808080 1px; */
+}
+
+.regist_car h2 {
+    border-left: solid #83D3B7 6px;
+    padding-left: 20px;
+    line-height: 40px;
+    margin-bottom:30px;
+}
+
+.regist_car h2:nth-child(4) {
+    margin-top:40px;
+}
+
+.regist_car .search_columns .long_li {
+    display: table-cell;
+    text-align: center;
+    width: 720px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_car .search_columns {
+    width: calc(120px * 6);
+    border-top: solid #42A382 8px;
+}
+
+.regist_car .search_columns ul {
+    list-style: none;
+    display: table;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_car .search_columns .input_li {
+    display: table-cell;
+    text-align: center;
+    width: 600px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    border-right: solid #808080 1px;;
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_car .search_columns .image_li {
+    display: table-cell;
+    text-align: center;
+    width: 600px;
+    height: 20px;
+    line-height: 20px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    border-right: solid #808080 1px;;
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_car .search_columns .image_li input {
+    height: 50px;
+    width: 550px;
+    padding: 12px;
+    /* border: solid #808080 1px; */
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_car .search_columns .input_li input {
+    height: 30px;
+    width: 550px;
+    border: solid #808080 1px;
+}
+
+.regist_car .search_columns .box_li {
+    display: table-cell;
+    text-align: center;
+    width: 120px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_car .search_columns button {
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #42A382;
+    color:white;
+    border-radius: 6px;
+}
+
+/********************************* 出品登録 *********************************/
+.regist_exhibit {
+    width: 100vw;
+    padding: 40px;
+    /* border: solid #808080 1px; */
+}
+
+.regist_exhibit h2 {
+    border-left: solid #83D3B7 6px;
+    padding-left: 20px;
+    line-height: 40px;
+    margin-bottom:30px;
+}
+
+.regist_exhibit .search_columns .long_li {
+    display: table-cell;
+    text-align: center;
+    width: 720px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_exhibit .search_columns {
+    width: calc(120px * 6);
+    border-top: solid #42A382 8px;
+}
+
+.regist_exhibit .search_columns ul {
+    list-style: none;
+    display: table;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_exhibit .search_columns .input_li {
+    display: table-cell;
+    text-align: center;
+    width: 600px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    border-right: solid #808080 1px;;
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_exhibit .search_columns .input_li input{
+    height: 30px;
+    width: 550px;
+    border: solid #808080 1px;
+}
+
+.regist_exhibit .search_columns .box_li {
+    display: table-cell;
+    text-align: center;
+    width: 120px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_exhibit .search_columns button {
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #42A382;
+    color:white;
+    border-radius: 6px;
+}
+
+
+/********************************* 案件登録 *********************************/
+.regist_matter {
+    width: 100vw;
+    padding: 40px;
+    /* border: solid #808080 1px; */
+}
+
+.regist_matter h2 {
+    border-left: solid #83D3B7 6px;
+    padding-left: 20px;
+    line-height: 40px;
+    margin-bottom:30px;
+}
+
+.regist_matter .search_columns .long_li {
+    display: table-cell;
+    text-align: center;
+    width: 720px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_matter .search_columns {
+    width: calc(120px * 6);
+    border-top: solid #42A382 8px;
+}
+
+.regist_matter .search_columns ul {
+    list-style: none;
+    display: table;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_matter .search_columns .input_li {
+    display: table-cell;
+    text-align: center;
+    width: 600px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    border-right: solid #808080 1px;;
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_matter .search_columns .input_li input{
+    height: 30px;
+    width: 550px;
+    border: solid #808080 1px;
+}
+
+.regist_matter .search_columns .box_li {
+    display: table-cell;
+    text-align: center;
+    width: 120px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_matter .search_columns button {
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #42A382;
+    color:white;
+    border-radius: 6px;
+}
+
+

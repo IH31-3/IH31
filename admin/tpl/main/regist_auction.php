@@ -2,7 +2,7 @@
     <h2>オークション登録</h2>
     <form action="" method="post">
     <input type="hidden" name="type" value="regist_auction">
-    <div class="search_columns">
+    999
         <ul>
             <!-- <li>オークション番号：<input type="text" name="auction_id"></li> -->
             <li class="box_li">オークション名</li>
