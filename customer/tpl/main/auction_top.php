@@ -4,11 +4,11 @@
     <!-- article繰り返す -->
     <article>
         <div class="status">
-            <p class="before">あと（時間）でオークション開始</p>
+            <!-- <p class="before">あと（時間）でオークション開始</p> -->
             <!--開始前-->
             <p class="now">あと（時間）でオークション終了</p>
             <!--開始中-->
-            <p class="after">オークション終了</p>
+            <!-- <p class="after">オークション終了</p> -->
             <!--開始後-->
         </div>
 

@@ -209,9 +209,27 @@ function regist_matter(){
     // db接続sql実行してください。
     $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
     mysqli_set_charset($cn, 'utf8');
-    $sql = "INSERT INTO matter(status,client_no,employee_no,vehicle_no,money)VALUES('" . $customer_id . "','" . $employee_id . "','" . $car_id . "','" . $car_price . "','" . $car_status . "');";
+    // $sql = "INSERT INTO matter(matter_no,status,client_no,employee_no,vehicle_no,mone)VALUES('" . $customer_id . "','" . $employee_id . "','" . $car_id . "','" . $car_price . "','" . $car_status . "');";
+    $sql = "INSERT INTO matter(
+                matter_no,
+                status,
+                client_no,
+                employee_no,
+                vehicle_no,
+                money
+            )select 
+                max(matter_no)+1,
+                '" . $customer_id . "',
+                '" . $employee_id . "',
+                '" . $car_id . "',
+                '" . $car_price . "',
+                '" . $car_status . "'
+            from matter;";
+
     mysqli_query($cn, $sql);
     mysqli_close($cn);
+
+    // Var_dump($sql);
 
 
     $result = [
