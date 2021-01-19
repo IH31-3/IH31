@@ -1,23 +1,301 @@
 main {
     width: 100%;
+    letter-spacing: 1px;
     
 }
+
+/* history_top */
 #history_top #main_image img{
-    width:100%
+    width:100%;
+    margin-bottom:120px;
 
 }
 
 #history_top h2:nth-child(1){
-    text-align: center;
-    margin: 60px;
+    text-align: left;
+    margin: 0 auto;
     font-weight: 600;
     font-size: 1.2rem;
+}
+
+#history_top dt{
+    padding-bottom: 15px;
+}
+
+#history_top dd{
+    padding-bottom: 5px;
+}
+
+#history_top article{
+    margin-bottom: 270px;
+}
+
+#contentsA{
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 120px;
+}
+
+/* auction_top */
+.status{
+    padding-top: 40px;
+    width: 50%;
+    max-width: 850px;
+    margin:0 auto;
+    text-align: center;
+    font-weight: 600;
+}
+
+.buttons{
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* global */
+.btn1{
+    letter-spacing: 0px;
+    height:80px;
+    line-height: 20px;
+    width: 300px;
+    text-align: center;
+    padding: 30px;
+    background-color: #EB7373;
+    color: #ffffff;
+    border-radius: 10px;
+    margin:0 auto;
+    
+    
+}
+
+.btn2{
+    letter-spacing: 0px;
+    height:80px;
+    line-height: 20px;
+    width: 300px;
+    text-align: center;
+    padding: 30px;
+    background-color: #707070;
+    color: #ffffff;
+    border-radius: 10px;
+    margin:0 auto;
+}
+
+.border_bottom{
+    
+    border-bottom: solid 1px #707070;
+    width: 70%;
+    max-width: 1000px;
+    padding: 10px;
+    
+}
+
+
+.contA{
+    width: 300px;
+    height: 330px;
+    border:solid 1px #707070;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+
+
+.font_blue{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #283C8E;
+}
+
+.font_gray{
+    color: #707070;
+}
+
+.back_gray{
+
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #EAE5E5;
+    font-size: 0.8rem;
+}
+
+.font_pink{
+    color: #EB7373;
+
+}
+
+.back_pink{
+    background-color: #EB7373;
+    line-height: 30px;
+    margin:0 auto;
+    width: 100px;
+    height: 40px;
+    padding:6px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.font_size_middle{
+    font-size: 1.6rem;
 }
 
 .center{
     text-align: center;
 }
 
+.left{
+    text-align: left;
+}
+
+.view_cemter{
+    
+    margin: 0 auto;
+    
+}
+
 .lheight{
     line-height: 30px;
 }
+
+.bottom30{
+    padding-bottom: 30px;
+}
+
+.out_line{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.big{
+    font-size: 1.6rem;
+}
+
+.postit_gray{
+    border-left: solid 3px #707070;
+    padding-left: 10px;
+}
+
+.postit_pink{
+    border-left: solid 3px #EB7373;
+    padding-left: 10px;
+}
+
+.auto_center{
+    margin: 0 auto;
+    
+}
+
+.mgn_top40{
+    margin-top: 40px;
+    
+}
+
+.before{
+    color: #EB7373;
+    font-weight: 500;
+    padding:10px;
+
+}
+
+.now{
+    width: auto;
+    color: white;
+    background-color: #E8C91C;
+    font-weight: 500;
+    padding:10px;
+
+}
+
+.after{
+    background-color: #707070;
+    color: #ffffff;
+    padding:10px;
+}
+
+
+/* car_sumnail */
+.car_sumnail{
+    margin: 0 auto;
+    margin-top: 25px;
+    border:solid 1px #707070;
+    box-shadow: 0 10px 10px 0 #82828280;
+    border-radius: 10px;
+    padding:10px;
+    height: 300px;
+    width: 70%;
+    max-width: 850px;
+    display: flex;
+
+
+}
+
+.car_sumnail .left_content img{
+    height: 250px;
+    width:250px;
+    vertical-align: center;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.car_sumnail .right_content{
+    margin-left: 50px;
+    margin-top: 25px;
+    width: 800px;
+    padding-right: 25px;
+}
+
+.car_sumnail .right_content h3{
+    font-size: 1.2rem;
+}
+
+.car_sumnail .car_info{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width:400px;
+}
+
+.car_info dd{
+    padding-top: 10px;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.auction_info{
+    border-top: solid 1px #707070;
+    padding-top: 20px;
+    margin-top: 20px;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    
+
+}
+
+.auction_info dt{
+    
+    height: 20px;
+    line-height: 20px;
+    
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.auction_info dd{
+    padding-top: 20px;
+    
+}
+
+
+
+
+

@@ -9,7 +9,7 @@ $const = load_page_source();
 // デフォルトで使用するテンプレートの指定
 $header = "tpl/header/adminHeader.php";
 $main = "tpl/main/index_top.php";
-$footer = "tpl/footer/sample.php";
+// $footer = "tpl/footer/sample.php"; // フッター不要なので切ってあります
 
 
 // ---------- 処理分岐・画面差し替えエリア ----------
@@ -85,4 +85,4 @@ if(isset($_POST["type"])){ // ----- POST登録用
 // 画面呼び出し
 require_once($header);
 require_once($main);
-require_once($footer);
+// require_once($footer);

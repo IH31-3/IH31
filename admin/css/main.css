@@ -2,6 +2,639 @@ main {
     position: absolute;
     top: 80px;
     width: 100vw;
-    height: 840px;
-    background-origin: #F7F7F7;
+    height: 1200px;
 }
+/********************************* 案件トップ *********************************/
+/********************** 検索のとこ **********************/
+.matter_top {
+    width: 100vw;
+    padding: 40px;
+    /* border: solid #808080 1px; */
+}
+
+.matter_top h2 {
+    border-left: solid #83D3B7 6px;
+    padding-left: 20px;
+    line-height: 40px;
+}
+
+.matter_top .select_button {
+    list-style: none;
+    display: table;
+    width: calc(120px * 6);
+    /* border: solid #808080 1px; */
+    margin-top: 30px;
+}
+
+.matter_top .select_button li{
+    width: calc(120px * 6);
+    display: table-cell;
+    text-align: center;
+}
+
+.matter_top .search_columns {
+    width: calc(120px * 6);
+    border-top: solid #42A382 8px;
+}
+
+.matter_top .search_columns ul {
+    list-style: none;
+    display: table;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.matter_top .search_columns .long_li {
+    display: table-cell;
+    text-align: center;
+    width: 720px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.matter_top .search_columns .input_li {
+    display: table-cell;
+    text-align: center;
+    width: 600px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    border-right: solid #808080 1px;;
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.matter_top .search_columns .input_li input{
+    height: 30px;
+    width: 550px;
+    border: solid #808080 1px;
+}
+
+.matter_top .search_columns .box_li {
+    display: table-cell;
+    text-align: center;
+    width: 120px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.matter_top .search_columns button {
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #42A382;
+    color:white;
+    border-radius: 6px;
+}
+
+/********************** 案件情報一覧のとこ **********************/
+
+.matter_top h2:nth-child(3) {
+    margin-top: 30px;
+}
+.matter_top .loop_columns {
+    margin-top: 30px;
+    width: calc(120px * 6);
+    /* border: solid #808080 1px; */
+    border-top: solid #42A382 8px;
+
+}
+.matter_top .loop_columns ul{
+    list-style: none;
+    display: table;
+    border-right: solid #808080 1px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+.matter_top .loop_columns ul:nth-child(1){
+    list-style: none;
+    display: table;
+    height: 10px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.matter_top .loop_columns li {
+    display: table-cell;
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+
+/********************************* 案件詳細 *********************************/
+/********************** 案件詳細のとこ **********************/
+.matter_detail {
+    width: 100vw;
+    padding: 40px;
+}
+
+.matter_detail .images{
+    list-style: none;
+    display: table;
+    /* border-right: solid #808080 1px; */
+    margin-left: 10px;
+    width: 720px;
+}
+
+.matter_detail .images li{
+    display: table-cell;
+    text-align: center;
+}
+
+.matter_detail .images li img {
+    width: 160px;
+    height: 170px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+
+/********************** 案件詳細情報のとこ **********************/
+
+.matter_detail h2 {
+    border-left: solid #83D3B7 6px;
+    padding-left: 20px;
+    line-height: 40px;
+    margin-bottom:20px;
+    border-bottom: solid #42A382 2px;
+}
+
+.matter_detail .data {
+    border-top: solid #808080 1px;
+    width: 720px;
+}
+
+.matter_detail .data ul{
+    list-style: none;
+    display: table;
+    border-right: solid #808080 1px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.matter_detail .data li{
+    display: table-cell;
+    text-align: center;
+    width: 240px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+
+    /* color: red; */
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.matter_detail .data li:nth-child(2n){
+    width: 480px;
+}
+
+/********************************* オークション登録 *********************************/
+
+.regist_auction {
+    width: 100vw;
+    padding: 40px;
+    /* border: solid #808080 1px; */
+}
+
+.regist_auction h2 {
+    border-left: solid #83D3B7 6px;
+    padding-left: 20px;
+    line-height: 40px;
+    margin-bottom:30px;
+}
+
+.regist_auction .search_columns .long_li {
+    display: table-cell;
+    text-align: center;
+    width: 720px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_auction .search_columns {
+    width: calc(120px * 6);
+    border-top: solid #42A382 8px;
+}
+
+.regist_auction .search_columns ul {
+    list-style: none;
+    display: table;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_auction .search_columns .input_li {
+    display: table-cell;
+    text-align: center;
+    width: 600px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    border-right: solid #808080 1px;;
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_auction .search_columns .input_li input{
+    height: 30px;
+    width: 550px;
+    border: solid #808080 1px;
+}
+
+.regist_auction .search_columns .box_li {
+    display: table-cell;
+    text-align: center;
+    width: 120px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_auction .search_columns button {
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #42A382;
+    color:white;
+    border-radius: 6px;
+}
+
+
+/********************************* 従業員登録 *********************************/
+.regist_employee {
+    width: 100vw;
+    padding: 40px;
+    /* border: solid #808080 1px; */
+}
+
+.regist_employee h2 {
+    border-left: solid #83D3B7 6px;
+    padding-left: 20px;
+    line-height: 40px;
+    margin-bottom:30px;
+}
+
+.regist_employee .search_columns .long_li {
+    display: table-cell;
+    text-align: center;
+    width: 720px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_employee .search_columns {
+    width: calc(120px * 6);
+    border-top: solid #42A382 8px;
+}
+
+.regist_employee .search_columns ul {
+    list-style: none;
+    display: table;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_employee .search_columns .input_li {
+    display: table-cell;
+    text-align: center;
+    width: 600px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    border-right: solid #808080 1px;;
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_employee .search_columns .input_li input{
+    height: 30px;
+    width: 550px;
+    border: solid #808080 1px;
+}
+
+.regist_employee .search_columns .box_li {
+    display: table-cell;
+    text-align: center;
+    width: 120px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_employee .search_columns button {
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #42A382;
+    color:white;
+    border-radius: 6px;
+}
+
+/********************************* 車両登録 *********************************/
+.regist_car {
+    width: 100vw;
+    padding: 40px;
+    /* border: solid #808080 1px; */
+}
+
+.regist_car h2 {
+    border-left: solid #83D3B7 6px;
+    padding-left: 20px;
+    line-height: 40px;
+    margin-bottom:30px;
+}
+
+.regist_car h2:nth-child(4) {
+    margin-top:40px;
+}
+
+.regist_car .search_columns .long_li {
+    display: table-cell;
+    text-align: center;
+    width: 720px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_car .search_columns {
+    width: calc(120px * 6);
+    border-top: solid #42A382 8px;
+}
+
+.regist_car .search_columns ul {
+    list-style: none;
+    display: table;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_car .search_columns .input_li {
+    display: table-cell;
+    text-align: center;
+    width: 600px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    border-right: solid #808080 1px;;
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_car .search_columns .image_li {
+    display: table-cell;
+    text-align: center;
+    width: 600px;
+    height: 20px;
+    line-height: 20px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    border-right: solid #808080 1px;;
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_car .search_columns .image_li input {
+    height: 50px;
+    width: 550px;
+    padding: 12px;
+    /* border: solid #808080 1px; */
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_car .search_columns .input_li input {
+    height: 30px;
+    width: 550px;
+    border: solid #808080 1px;
+}
+
+.regist_car .search_columns .box_li {
+    display: table-cell;
+    text-align: center;
+    width: 120px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_car .search_columns button {
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #42A382;
+    color:white;
+    border-radius: 6px;
+}
+
+/********************************* 出品登録 *********************************/
+.regist_exhibit {
+    width: 100vw;
+    padding: 40px;
+    /* border: solid #808080 1px; */
+}
+
+.regist_exhibit h2 {
+    border-left: solid #83D3B7 6px;
+    padding-left: 20px;
+    line-height: 40px;
+    margin-bottom:30px;
+}
+
+.regist_exhibit .search_columns .long_li {
+    display: table-cell;
+    text-align: center;
+    width: 720px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_exhibit .search_columns {
+    width: calc(120px * 6);
+    border-top: solid #42A382 8px;
+}
+
+.regist_exhibit .search_columns ul {
+    list-style: none;
+    display: table;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_exhibit .search_columns .input_li {
+    display: table-cell;
+    text-align: center;
+    width: 600px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    border-right: solid #808080 1px;;
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_exhibit .search_columns .input_li input{
+    height: 30px;
+    width: 550px;
+    border: solid #808080 1px;
+}
+
+.regist_exhibit .search_columns .box_li {
+    display: table-cell;
+    text-align: center;
+    width: 120px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_exhibit .search_columns button {
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #42A382;
+    color:white;
+    border-radius: 6px;
+}
+
+
+/********************************* 案件登録 *********************************/
+.regist_matter {
+    width: 100vw;
+    padding: 40px;
+    /* border: solid #808080 1px; */
+}
+
+.regist_matter h2 {
+    border-left: solid #83D3B7 6px;
+    padding-left: 20px;
+    line-height: 40px;
+    margin-bottom:30px;
+}
+
+.regist_matter .search_columns .long_li {
+    display: table-cell;
+    text-align: center;
+    width: 720px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_matter .search_columns {
+    width: calc(120px * 6);
+    border-top: solid #42A382 8px;
+}
+
+.regist_matter .search_columns ul {
+    list-style: none;
+    display: table;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_matter .search_columns .input_li {
+    display: table-cell;
+    text-align: center;
+    width: 600px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    border-right: solid #808080 1px;;
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_matter .search_columns .input_li input{
+    height: 30px;
+    width: 550px;
+    border: solid #808080 1px;
+}
+
+.regist_matter .search_columns .box_li {
+    display: table-cell;
+    text-align: center;
+    width: 120px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_matter .search_columns button {
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #42A382;
+    color:white;
+    border-radius: 6px;
+}
+
+
+/********************************* 案件登録 *********************************/
+.regist_top {
+    width: 100vw;
+    padding: 40px;
+    /* border: solid #808080 1px; */
+}
+
+.regist_top h2 {
+    border-left: solid #83D3B7 6px;
+    padding-left: 20px;
+    line-height: 40px;
+    margin-bottom:30px;
+}
+
+.regist_top .search_columns .long_li {
+    display: table-cell;
+    text-align: center;
+    width: 720px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_top .search_columns {
+    width: calc(120px * 6);
+    border-top: solid #42A382 8px;
+}
+
+.regist_top .search_columns ul {
+    list-style: none;
+    display: table;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_top .search_columns .input_li {
+    display: table-cell;
+    text-align: center;
+    width: 600px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    border-right: solid #808080 1px;;
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_top .search_columns .input_li input{
+    height: 30px;
+    width: 550px;
+    border: solid #808080 1px;
+}
+
+.regist_top .search_columns .box_li {
+    display: table-cell;
+    text-align: center;
+    width: 120px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.regist_top .search_columns button {
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #42A382;
+    color:white;
+    border-radius: 6px;
+}
+
+
