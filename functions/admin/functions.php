@@ -1,10 +1,11 @@
 <?php
-require_once '../config.php';
-require_once '../functions/admin/reqistration.php';
-require_once '../functions/admin/detail_matter.php';
-require_once '../functions/archived/select.php';
+// require_once '../config.php';
+require_once '../defaultConfig.php';
+// require_once '../functions/admin/reqistration.php';
+// require_once '../functions/admin/detail_matter.php';
+// require_once '../functions/archived/select.php';
 
-function load_page_source() {
+function load_page_source(){
 // 画面の固定値指定
     $const = [
         "title" => "TOP | HALMORTOR",
@@ -233,7 +234,6 @@ function regist_matter(){
     mysqli_close($cn);
 
     // Var_dump($sql);
-
 
     $result = [
         $matter_id,
