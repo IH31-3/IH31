@@ -21,8 +21,9 @@ if(isset($_GET["page"])){ // ----- ページ遷移用
     if($page=="matter_top"){
         // $result = matter_all_search($_GET["status"], $_GET["text"]);
         // statusとtextで案件検索、結果を配列でmatter_topにて表示する
-
+        //値取得
         $result = search_matter();
+
         // var_dump($result);
     }
 

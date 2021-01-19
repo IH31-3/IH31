@@ -128,7 +128,6 @@
     <ul>
     </ul>
 </div>
-
 <ul>
     <li><a href="">督促状態を更新</a></li>
     <li><a href="">領収書印刷</a></li>
