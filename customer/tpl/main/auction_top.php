@@ -17,38 +17,38 @@
                 <img src="./img/sample_car.png">
             </div>
             <div class="right_content">
-                <h3 class="bold">(メーカー) (車種名)</h3>
+                <h3 class="bold">HONDA MSX</h3>
                 <div class="car_info">
                     <dl>
                         <dt class="back_gray center">年式</dt>
-                        <dd>(年式)</dd>
+                        <dd>2013製</dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">走行量</dt>
-                        <dd>(走行量)</dd>
+                        <dd>1万km未満</dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">排気量</dt>
-                        <dd>(排気量)</dd>
+                        <dd>1500cc</dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">車検</dt>
-                        <dd>(車検)</dd>
+                        <dd>済み</dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">修復歴</dt>
-                        <dd>(修復歴)</dd>
+                        <dd>なし</dd>
                     </dl>
                 </div>
 
                 <div class="auction_info">
                     <dl class="font_pink">
                         <dt class="postit_pink">開始価格</dt>
-                        <dd class="bold"><span class="big center">(価格)</span>万円</dd>
+                        <dd class="bold"><span class="big center">1800</span>万円</dd>
                     </dl>
                     <dl>
                         <dt class="postit_gray">オークション予定日時</dt>
-                        <dd>(開始日時)〜(開始日時+10分)</dd>
+                        <dd>01/19 14:00 〜 01/19 14:50</dd>
                     </dl>
                 </div>
 
@@ -57,7 +57,7 @@
             <p class="btn1"><a class=" view_center" href="<?= $auction_bid_url ?>"><span class="padding_img"><img src="./img/auction.png" width="20px"></span>このオークションに参加する</a></p>
             <!--開催中-->
 
-            <!-- <p class="btn2"><span class="padding_img"><img src="./img/auction.png" width="20px"></span> このオークションに参加する</p> -->
+            <p class="btn2"><span class="padding_img"><img src="./img/auction.png" width="20px"></span> このオークションに参加する</p>
             <!--開催中以外-->
         </div>
 

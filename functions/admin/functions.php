@@ -19,7 +19,6 @@ function load_page_source() {
 // --------------- 検索系 --------------- //
 // 案件検索
 function search_matter(){
-
     $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
     mysqli_set_charset($cn, 'utf8');
     $sql = "SELECT matter_no, status, client.client_name, employee.employee_name, vehicle_no, money 

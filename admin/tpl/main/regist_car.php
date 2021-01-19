@@ -107,9 +107,9 @@
             <li class="box_li">燃料</li>
             <li class="input_li">
             <select name="car_fuel">
-                <option value="レギュラー">レギュラー</option>
-                <option value="ハイオク">ハイオク</option>
-                <option value="ディーゼル">ディーゼル</option>
+                <option value="1">レギュラー</option>
+                <option value="2">ハイオク</option>
+                <option value="3">ディーゼル</option>
             </select>
             </li>
         </ul>
