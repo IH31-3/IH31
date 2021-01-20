@@ -1,5 +1,5 @@
 <main class="regist_auction">
-    <h2>オークション登録</h2>
+    <h1>オークション登録</h1>
     <form action="" method="post">
     <input type="hidden" name="type" value="regist_auction">
     <div class="search_columns">

@@ -1,58 +1,58 @@
 <?php
-// ---------- 前処理 ----------
 // 関数ファイル読み込み
 require_once("../functions/admin/functions.php");
 
-// ---------- 初期値設定エリア ----------
-// デフォルトで使用する固定値を関数から呼び出し
+// -------------------- 初期値設定 -------------------- //
 $const = load_page_source();
 // デフォルトで使用するテンプレートの指定
 $header = "tpl/header/adminHeader.php";
 $main = "tpl/main/index_top.php";
-// $footer = "tpl/footer/sample.php"; // フッター不要なので切ってあります
+// フッター不要なので切ってあります
 
 
-// ---------- 処理分岐・画面差し替えエリア ----------
-
-if(isset($_GET["page"])){ // ----- ページ遷移用
+// -------------------- 画面処理 -------------------- //
+// ---------- 画面表示前出力処理 ---------- //
+if(isset($_GET["page"])){ 
     $page = $_GET["page"];
 
-    // 案件表示前の案件検索結果一覧表示
-    if($page=="matter_top"){
-        // $result = matter_all_search($_GET["status"], $_GET["text"]);
-        // statusとtextで案件検索、結果を配列でmatter_topにて表示する
-        //値取得
-        $result = search_matter();
-
-        // var_dump($result);
+    // ---------- 登録 ----------
+    // 出品登録画面表示
+    if($page=="regist_exhibit"){
+        $result = search_auction();
     }
 
+    // ---------- 案件検索 ----------
+    // 案件検索表示
+    if($page=="matter_top"){
+        $result = search_matter();
+    }
     // 案件詳細表示
     if($page=="matter_detail"){
         $id = $_GET["id"];
         $result = search_matter_detail($id);
-        // var_dump($result);
     }
 
-    // 出品登録画面表示のselect用オークション一覧表示
-    if($page=="regist_exhibit"){
-        // $result = auction_all_search();
-        // 開催前のオークションを検索、結果を配列でregist_exhibit内selectボックスにて表示する
-
-        $result = [
-            "auction1" => "春季開催！春のセール",
-            "auction2" => "夏季開催！夏のセール",
-        ];
+    // ---------- 変更・管理 ----------
+    // オークション管理
+    if($page=="change_auction"){
+        $result = change_auction();
     }
+    // オークション詳細
+    if($page=="change_auction_detail"){
+        $result = change_auction_detail();
+    }
+
 
     // --- 呼び出しmainページの変更
     $main = "tpl/main/" . $page . ".php";
 }
 
-if(isset($_POST["type"])){ // ----- POST登録用
+// ---------- 画面表示後入力処理 ---------- //
+if(isset($_POST["type"])){
     $type = $_POST["type"];
     $page = "done";
 
+    // ---------- 登録 ----------
     // 従業員登録
     if($type == "regist_employee"){
         $result = regist_employee();
@@ -78,12 +78,15 @@ if(isset($_POST["type"])){ // ----- POST登録用
         $result = regist_auction();
     }
 
+    // ---------- 案件検索 ----------
+
+    // ---------- 変更・管理 ----------
+
     // --- 呼び出しmainページの変更
     $main = "tpl/main/" . $page . ".php";
 }
 
-// ---------- html出力 ----------
-// 画面呼び出し
+// -------------------- 画面呼び出し -------------------- //
 require_once($header);
 require_once($main);
 // require_once($footer);

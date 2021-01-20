@@ -57,7 +57,7 @@
             <p class="btn1"><a class=" view_center" href="<?= $auction_bid_url ?>"><span class="padding_img"><img src="./img/auction.png" width="20px"></span>このオークションに参加する</a></p>
             <!--開催中-->
 
-            <p class="btn2"><span class="padding_img"><img src="./img/auction.png" width="20px"></span> このオークションに参加する</p>
+            <!-- <p class="btn2"><span class="padding_img"><img src="./img/auction.png" width="20px"></span> このオークションに参加する</p> -->
             <!--開催中以外-->
         </div>
 
@@ -72,6 +72,6 @@
         <?php endforeach ?>
     </ul> -->
 
-    <a href="http://127.0.0.1/IH31/customer/index.php">トップへ戻る</a>
+    <!-- <a href="http://127.0.0.1/IH31/customer/index.php">トップへ戻る</a> -->
 </main>
 <!-- main ここまで -->

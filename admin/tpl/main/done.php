@@ -1,5 +1,5 @@
 <main class="done">
-    <h2>登録完了しました</h2>
+    <h1>登録完了しました</h1>
     <div class="search_columns">
     <?php foreach($result as $column): ?>
     <ul>

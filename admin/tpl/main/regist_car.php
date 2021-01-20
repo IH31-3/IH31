@@ -1,5 +1,5 @@
 <main class="regist_car">
-    <h2>車両登録</h2>
+    <h1>車両登録</h1>
     <form action="" method="post" enctype = "multipart/form-data">
     <input type="hidden" name="type" value="regist_car">
     <h2> 写真を選択 </h2>

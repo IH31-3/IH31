@@ -1,5 +1,5 @@
 <main class="regist_top">
-    <h2>登録トップ</h2>
+    <h1>登録トップ</h1>
     <form action="" method="get">
     <div class="search_columns">
     <!-- <ul>

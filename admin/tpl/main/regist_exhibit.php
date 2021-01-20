@@ -1,5 +1,5 @@
 <main class="regist_exhibit">
-    <h2>出品登録</h2>
+    <h1>出品登録</h1>
     <form action="" method="post">
     <input type="hidden" name="type" value="regist_exhibit">
     <div class="search_columns">

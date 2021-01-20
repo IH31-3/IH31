@@ -1,5 +1,5 @@
 <main class="regist_matter">
-    <h2>案件登録</h2>
+    <h1>案件登録</h1>
     <form action="" method="post">
     <input type="hidden" name="type" value="regist_matter">
     <div class="search_columns">

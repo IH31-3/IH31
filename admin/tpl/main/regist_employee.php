@@ -1,5 +1,5 @@
 <main class="regist_employee">
-    <h2>従業員登録</h2>
+    <h1>従業員登録</h1>
     <form action="" method="post">
     <input type="hidden" name="type" value="regist_employee">
     <div class="search_columns">

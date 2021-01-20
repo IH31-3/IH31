@@ -18,7 +18,19 @@ function load_page_source(){
     return $const;
 }
 // --------------- 検索系 --------------- //
-// 案件検索
+// ---------- 登録 ---------- //
+// ----- 出品登録 -----
+function search_auction(){
+    $result = [
+        "auction1" => "春季開催！春のセール",
+        "auction2" => "夏季開催！夏のセール",
+    ];
+
+    return $result;
+}
+
+// ---------- 案件検索 ---------- //
+// ----- 案件検索トップ -----
 function search_matter(){
     $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
     mysqli_set_charset($cn, 'utf8');
@@ -37,8 +49,7 @@ function search_matter(){
     }
     return $result;
 }
-
-// 案件詳細検索
+// ----- 案件詳細検索 -----
 function search_matter_detail($id){
 
     $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
@@ -59,6 +70,24 @@ function search_matter_detail($id){
     return $result;    
 }
 
+// ---------- 変更・管理 ---------- //
+function change_auction(){
+    
+    // db接続sql実行してください。
+
+    return $result;
+}
+
+function change_auction_detail($id){
+
+    // db接続sql実行してください。
+
+    $result = [];
+    while($row = mysqli_fetch_assoc($sql_result)){
+        $result[] = $row;
+    }
+    return $result;
+}
 
 // --------------- 登録系 --------------- //
 // 従業員登録
