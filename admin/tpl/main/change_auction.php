@@ -36,7 +36,7 @@
                 <li><?= $column["auction_name"] ?></li>
                 <li><?= $column["auction_car_count"] ?> 台</li>
                 <li><?= $column["auction_date"] ?></li>
-                <li><a href="http://127.0.0.1/IH31/admin/index.php?page=matter_detail&id=<?= $column["matter_no"] ?>">詳細へ</a></li>
+                <li><a href="http://127.0.0.1/IH31/admin/index.php?page=matter_detail&id=<?= $column["auction_no"] ?>">詳細へ</a></li>
             </ul>
         <?php endforeach ?>
         </ul>

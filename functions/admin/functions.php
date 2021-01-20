@@ -1,11 +1,13 @@
 <?php
+
 // require_once '../config.php';
 require_once '../defaultConfig.php';
+
 // require_once '../functions/admin/reqistration.php';
 // require_once '../functions/admin/detail_matter.php';
 // require_once '../functions/archived/select.php';
 
-function load_page_source(){
+function load_page_source() {
 // 画面の固定値指定
     $const = [
         "title" => "TOP | HALMORTOR",
@@ -17,10 +19,11 @@ function load_page_source(){
     ];
     return $const;
 }
+
 // --------------- 検索系 --------------- //
 // ---------- 登録 ---------- //
 // ----- 出品登録 -----
-function search_auction(){
+function search_auction() {
     $result = [
         "auction1" => "春季開催！春のセール",
         "auction2" => "夏季開催！夏のセール",
@@ -31,7 +34,7 @@ function search_auction(){
 
 // ---------- 案件検索 ---------- //
 // ----- 案件検索トップ -----
-function search_matter(){
+function search_matter() {
     $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
     mysqli_set_charset($cn, 'utf8');
     $sql = "SELECT matter_no, status, client.client_name, employee.employee_name, vehicle_no, money 
@@ -43,14 +46,15 @@ function search_matter(){
     mysqli_close($cn);
 
     $result = [];
-    
-    while($row = mysqli_fetch_assoc($sql_result)){
+
+    while ($row = mysqli_fetch_assoc($sql_result)) {
         $result[] = $row;
     }
     return $result;
 }
+
 // ----- 案件詳細検索 -----
-function search_matter_detail($id){
+function search_matter_detail($id) {
 
     $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
     mysqli_set_charset($cn, 'utf8');
@@ -64,34 +68,56 @@ function search_matter_detail($id){
     mysqli_close($cn);
 
     $result = [];
-    while($row = mysqli_fetch_assoc($sql_result)){
+    while ($row = mysqli_fetch_assoc($sql_result)) {
         $result[] = $row;
     }
-    return $result;    
+    return $result;
 }
 
 // ---------- 変更・管理 ---------- //
-function change_auction(){
-    
+function change_auction() {
+    $date = date("Y/m/d ");
     // db接続sql実行してください。
+    $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
+    mysqli_set_charset($cn, 'utf8');
+    $sql = "SELECT a.auction_no,a.auction_name,a.explanation,a.date as 'auction_date' ,COUNT(*) as 'auction_car_count'  FROM auction a 
+LEFT OUTER JOIN listing l ON a.auction_no = l.auction_no GROUP BY a.auction_no";
 
-    return $result;
-}
-
-function change_auction_detail($id){
-
-    // db接続sql実行してください。
+    $sql_result = mysqli_query($cn, $sql);
+    mysqli_close($cn);
 
     $result = [];
-    while($row = mysqli_fetch_assoc($sql_result)){
+    while ($row = mysqli_fetch_assoc($sql_result)) {
         $result[] = $row;
     }
     return $result;
+    //var_dump($result);
+}
+
+function change_auction_detail($id) {
+    //追加で車の情報などを表示するならSELECTにカラムを追加してください
+    // db接続sql実行してください。
+    $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
+    mysqli_set_charset($cn, 'utf8');
+    $sql = "SELECT l.listing_no,l.vehicle_no,lh.client_no,ifnull(max(lh.money), 0)as 'money' FROM listing l 
+LEFT OUTER JOIN listing_history lh ON l.listing_no = lh.listing_no 
+INNER JOIN vehicle v ON l.vehicle_no = v.vehicle_no 
+WHERE l.auction_no = " . $id . "
+GROUP BY lh.listing_no ";
+    $sql_result = mysqli_query($cn, $sql);
+    mysqli_close($cn);
+
+    $result = [];
+    while ($row = mysqli_fetch_assoc($sql_result)) {
+        $result[] = $row;
+    }
+    return $result;
+    //var_dump($sql);
 }
 
 // --------------- 登録系 --------------- //
 // 従業員登録
-function regist_employee(){
+function regist_employee() {
     $id = $_POST["employee_id"];
     $name = $_POST["employee_name"];
     $passwd = $_POST["employee_passwd"];
@@ -104,15 +130,15 @@ function regist_employee(){
     mysqli_close($cn);
 
     $result = [
-        $id, 
-        $name, 
+        $id,
+        $name,
         $passwd,
     ];
     return $result;
 }
 
 // 車両登録
-function regist_car(){
+function regist_car() {
     $car_no = $_POST["car_no"];
     $model_year = $_POST["model_year"];
     $car_type = $_POST["car_type"];
@@ -151,7 +177,7 @@ function regist_car(){
     ];
 
     // 別名で保存
-    for($i=0;$i<4;$i++):
+    for ($i = 0; $i < 4; $i++):
         // 画像保存先パスの生成・保存
         $image_path = "../pro3api/public/car_img/" . $car_no . "_" . $i . ".jpg";
         move_uploaded_file($images[$i]["tmp_name"], $image_path);
@@ -163,7 +189,6 @@ function regist_car(){
     // 車体NO + _3.jpg
     // になっているので、呼び出す画面でループさせます。
     // 車体NOだけわかれば表示できるので、画像パスはDB保存しなくて大丈夫です。
-
     // db接続sql実行してください。
     $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
     mysqli_set_charset($cn, 'utf8');
@@ -212,7 +237,7 @@ function regist_car(){
 }
 
 // 出品登録
-function regist_exhibit(){
+function regist_exhibit() {
     $car_id = $_POST["car_id"];
     $auction_id = $_POST["auction_id"];
 
@@ -222,7 +247,7 @@ function regist_exhibit(){
     $sql = "INSERT INTO listing(vehicle_no,auction_no)VALUES(" . $car_id . ",'" . $auction_id . "');";
     mysqli_query($cn, $sql);
     mysqli_close($cn);
-    
+
     $result = [
         $car_id,
         $auction_id,
@@ -231,7 +256,7 @@ function regist_exhibit(){
 }
 
 // 案件登録
-function regist_matter(){
+function regist_matter() {
     // $matter_id = $_POST["matter_id"];
     $customer_id = $_POST["customer_id"];
     $employee_id = $_POST["employee_id"];
@@ -276,7 +301,7 @@ function regist_matter(){
 }
 
 // オークション登録
-function regist_auction(){
+function regist_auction() {
     // $auction_id = $_POST["auction_id"];
     $auction_name = $_POST["auction_name"];
     $auction_date = $_POST["auction_date"];
