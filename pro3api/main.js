@@ -12,7 +12,7 @@ var formatted_hour = Number(dt.toFormat("HH24")); // int変換込み
 var formatted_min = Number(dt.toFormat("MI")); // int変換込み
 
 var startHour = formatted_hour;  //オークション開催時刻　時(13時)
-var auctionTime = 10; //オークションの開催時間 　分(10)
+var auctionTime = 1; //オークションの開催時間 　分(10)
 var buffMinutues = formatted_min;  //オークションの開催時刻　分（0）　デバック用
 
 ////////////////////////////////////////////////////////////////////////////
@@ -74,6 +74,21 @@ connection.connect((error) => {
 });
 
 http_socket.listen(9000);
+//////////////////////////////////////////////////////////////////
+//実行しているオークションの車両情報をＪＳＯＮで送信
+app.get('/sample', function(req, res) {
+  res.json({ 
+      'vehicle_no': put[aucCount]['vehicle_no'],
+      'model_name':put[aucCount]['model_name'],
+      'maker':put[aucCount]['maker'],
+      'money':startMoney,
+      'model_year':put[aucCount]['model_year'],
+      'displacement':put[aucCount]['displacement'],
+      'car_history':put[aucCount]['car_history'],
+      'repair_history':put[aucCount]['repair_history']
+      
+  });
+});
 
 ///////////////////////////////////////////////////////////////////
 /**
