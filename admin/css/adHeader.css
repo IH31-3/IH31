@@ -1,13 +1,13 @@
 header {
     height: 80px;
-    width: 100%;
+    width: 100vw;
     background-color: #EAEAEA;
     box-shadow: 0 10px 25px 0 #82828280;
 }
 
 header img {
-    width: 160px;
-    min-width: 160px;
+    width: 200px;
+    min-width: 200px;
 }
 
 header ul {
@@ -15,14 +15,18 @@ header ul {
     
 }
 
-header li, p {
+header li {
     position: relative;
     font-size: 1.3rem;
     color: #626262;
-    width: 250px;
+    width: 280px;
     height: 80px;
     /* border: solid 1px black; */
     text-align: center;
+}
+
+header li:nth-child(1){
+    width: 400px;
 }
 
 #header-width {

@@ -1,5 +1,5 @@
 <main class="change_top">
-    <h2>変更トップ</h2>
+    <h1>変更トップ</h1>
     <form action="" method="get">
     <div class="search_columns">
         <ul>
@@ -12,7 +12,7 @@
             <li class="long_li"><button type="submit" name="page" value="change_customer"><?= "顧客検索" ?></button></li>
         </ul>
         <ul>
-            <li class="long_li"><button type="submit" name="page" value="change_auction"><?= "オークション検索" ?></button></li>
+            <li class="long_li"><button type="submit" name="page" value="change_auction"><?= "オークション管理" ?></button></li>
         </ul>
     </div>
     </form>

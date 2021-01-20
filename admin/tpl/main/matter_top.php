@@ -1,4 +1,5 @@
 <main class="matter_top">
+    <h1>案件検索</h1>
     <h2>案件一覧検索</h2>
     <form action="" method="get">
         <!-- <input type="hidden" name="page" value="matter_top"> buttonかhiddenかで保持するかも-->

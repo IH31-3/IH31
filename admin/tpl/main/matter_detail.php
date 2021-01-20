@@ -1,5 +1,5 @@
 <main class="matter_detail">
-<h2>案件詳細</h2>
+<h1>案件詳細</h1>
     <ul class="images">
         <li><img src="../pro3api/public/car_img/<?= $result[0]['vehicle_no'] ?>_0.jpg", height="200", width="200"></li>
         <li><img src="../pro3api/public/car_img/<?= $result[0]['vehicle_no'] ?>_1.jpg", height="200", width="200"></li>
