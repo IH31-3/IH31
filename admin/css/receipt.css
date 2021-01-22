@@ -1,0 +1,118 @@
+#wrapper{
+    width: 595px;
+    height: 845px;
+    margin:0 auto;
+    
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.center{
+    text-align: center;
+}
+
+.big{
+    font-size: 1.8rem;
+}
+
+.middle{
+    font-size: 1rem;
+}
+
+.mgn_top{
+    margin-top: 50px;
+}
+
+.mgn_bottom{
+    margin-bottom: 50px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.border_bottom{
+    
+    padding-bottom:10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: solid 1px #000;
+}
+
+.amount{
+    height: 50px;
+    line-height: 50px;
+    width:60%;
+    margin:0 auto;
+    background-color: rgb(199, 199, 199);
+    color: #000;
+    border-bottom: double 4px #000;
+}
+
+.auto_center{
+    margin:auto;
+}
+
+.mgn{
+    margin: 0 auto;
+    margin-top: 50px;
+}
+table{
+    margin: 15px;
+    width: 250px;
+}
+td{
+    padding:10px;
+}
+
+#tables{
+    width: 90%;
+    margin: auto;
+}
+
+img{
+    width: 100px;
+}
+
+#revenue{
+    margin-left:340px ;
+
+   
+
+}
+
+hr{
+    border: none;
+    border-bottom:dashed 1px #000;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.frame{
+    
+    padding:10px;
+    border: solid 1px #000;
+    margin: auto;
+    font-size: 0.8rem;
+    width:500px;
+    height: 50px;
+    line-height: 30px;
+}
+
+dl{
+    margin: 50px;
+}
+
+dt{
+    padding:10px;
+}
+dd{
+    padding:10px;
+}
+
+.table1 td{
+    border: solid 1px #000;
+}
