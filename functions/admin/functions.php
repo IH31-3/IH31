@@ -103,7 +103,7 @@ function change_auction_detail($id) {
 LEFT OUTER JOIN listing_history lh ON l.listing_no = lh.listing_no 
 INNER JOIN vehicle v ON l.vehicle_no = v.vehicle_no 
 WHERE l.auction_no = " . $id . "
-GROUP BY lh.listing_no ";
+GROUP BY lh.listing_no;";
     $sql_result = mysqli_query($cn, $sql);
     mysqli_close($cn);
 
