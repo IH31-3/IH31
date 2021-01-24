@@ -54,27 +54,27 @@
                 <img src="./img/sample_car.png">
             </div>
             <div class="right_content">
-                <h3 class="bold"><?= $arr["maker"] ?> <?= $arr["model_name"] ?></h3>
+                <h3 class="bold"><?= $arr["maker"] ?>(メーカー) <?= $arr["model_name"] ?>(車種名)</h3>
                 <div class="car_info">
                     <dl>
                         <dt class="back_gray center">年式</dt>
-                        <dd><?= $arr["model_year"] ?></dd>
+                        <dd><?= $arr["model_year"] ?>(年式)</dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">走行量</dt>
-                        <dd><?= $arr["car_mileage"] ?></dd>
+                        <dd><?= $arr["car_mileage"] ?>(走行量)</dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">排気量</dt>
-                        <dd><?= $arr["displacement"] ?></dd>
+                        <dd><?= $arr["displacement"] ?>(排気量)</dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">車検</dt>
-                        <dd><?= $arr["car_check"] ?></dd>
+                        <dd><?= $arr["car_check"] ?>(車検)</dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">修復歴</dt>
-                        <dd><?= $arr["repair_history"] ?></dd>
+                        <dd><?= $arr["repair_history"] ?>(修復歴)</dd>
                     </dl>
                 </div>
 
