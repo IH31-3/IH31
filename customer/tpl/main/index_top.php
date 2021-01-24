@@ -53,6 +53,19 @@
             <div class="left_content">
                 <img src="./img/sample_car.png">
             </div>
+            <!-- {
+                "vehicle_no":1,
+                "model_name":"NSX",
+                "maker":"ホンダ",
+                "money":1800,
+                "model_year":2019,
+                "displacement":3500,
+                "car_history":"自家用",
+                "repair_history":"有",
+                "start_date":"2020/01/01",
+                "start_min":35,
+                "interval":10 
+            }-->
             <div class="right_content">
                 <h3 class="bold"><?= $arr["maker"] ?>(メーカー) <?= $arr["model_name"] ?>(車種名)</h3>
                 <div class="car_info">
