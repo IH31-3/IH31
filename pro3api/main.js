@@ -12,7 +12,7 @@ var formatted_hour = Number(dt.toFormat("HH24")); // int変換込み
 var formatted_min = Number(dt.toFormat("MI")); // int変換込み
 
 var startHour = formatted_hour;  //オークション開催時刻　時(13時)
-var auctionTime = 1; //オークションの開催時間 　分(10)
+var auctionTime = 1; //オークションの開催時間 　分(x10)
 var buffMinutues = formatted_min;  //オークションの開催時刻　分（0）　デバック用
 
 ////////////////////////////////////////////////////////////////////////////
@@ -85,8 +85,10 @@ app.get('/sample', function(req, res) {
       'model_year':put[aucCount]['model_year'],
       'displacement':put[aucCount]['displacement'],
       'car_history':put[aucCount]['car_history'],
-      'repair_history':put[aucCount]['repair_history']
-      
+      'repair_history':put[aucCount]['repair_history'],
+      'start_date': startDate,
+      'start_min': buffMinutues,
+      'interval': auctionTime * 10
   });
 });
 
