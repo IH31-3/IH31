@@ -21,6 +21,26 @@ $footer = "tpl/footer/customerFooter.php";
 if(isset($_GET["page"])){ // ----- ページ遷移用
     $page = $_GET["page"];
 
+    if($page=="index_top"){
+        $url = "http://localhost:9000/sample";
+        $json = file_get_contents($url);
+        $arr = json_decode($json,true);
+        var_dump($arr);
+
+        // array(8) {
+        //     ["vehicle_no"]=> int(1) 
+        //     ["model_name"]=> string(3) "NSX" 
+        //     ["maker"]=> string(9) "ホンダ" 
+        //     ["money"]=> int(1800) 
+        //     ["model_year"]=> int(2019) 
+        //     ["displacement"]=> int(3500) 
+        //     ["car_history"]=> string(9) "自家用" 
+        //     ["repair_history"]=> string(3) "有" 
+        // }
+
+
+    }
+
     // オークション一覧表示
     if($page=="auction_top"){
         $auction_bid_url = "http://127.0.0.1:9000/auction/" . $_SESSION['user_id'];

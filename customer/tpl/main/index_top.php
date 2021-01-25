@@ -54,15 +54,15 @@
                 <img src="./img/sample_car.png">
             </div>
             <div class="right_content">
-                <h3 class="bold">(メーカー) (車種名)</h3>
+                <h3 class="bold"><?= $arr["maker"] ?> <?= $arr["model_name"] ?></h3>
                 <div class="car_info">
                     <dl>
                         <dt class="back_gray center">年式</dt>
-                        <dd>(年式)</dd>
+                        <dd><?= $arr["model_year"] ?></dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">走行量</dt>
-                        <dd>(走行量)</dd>
+                        <dd><?= $arr["displacement"] ?></dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">排気量</dt>

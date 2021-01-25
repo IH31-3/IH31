@@ -24,7 +24,7 @@
         <nav>
             <ul>
                 <li><a href="./index.php"><img id="logo" src="./img/HALMOTORw.png" alt="HALMORTOR" width="350px"></a></li>
-                <li class="mNav"><a href="http://127.0.0.1/IH31/customer/index.php?page=history_top"><img src="./img/home.png" width="2px">TOP</a></li>
+                <li class="mNav"><a href="http://127.0.0.1/IH31/customer/index.php"><img src="./img/home.png" width="2px">TOP</a></li>
                 <li class="mNav"><a href="http://127.0.0.1/IH31/customer/index.php?page=auction_top"><img src="./img/auction.png" width="2px">AUCTION</a></li>
                 <li class="mNav"><a href="http://127.0.0.1/IH31/customer/index.php?page=mypage_top"><img src="./img/mypage.png" width="2px">MY PAGE</a></li>
             </ul>
