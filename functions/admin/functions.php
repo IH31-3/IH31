@@ -250,7 +250,16 @@ function regist_exhibit() {
     // db接続sql実行してください。
     $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
     mysqli_set_charset($cn, 'utf8');
-    $sql = "INSERT INTO listing(vehicle_no,auction_no)VALUES(" . $car_id . ",'" . $auction_id . "');";
+    $sql = "INSERT INTO listing(
+        listing_no,
+        vehicle_no,
+        auction_no
+    )select
+        max(listing_no)+1,
+        '" . $car_id . "',
+        '" . $auction_id . "'
+    from listing;";
+    var_dump($sql);
     mysqli_query($cn, $sql);
     mysqli_close($cn);
 
