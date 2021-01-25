@@ -67,27 +67,27 @@
                 "interval":10 
             }-->
             <div class="right_content">
-                <h3 class="bold"><?= $arr["maker"] ?>(メーカー) <?= $arr["model_name"] ?>(車種名)</h3>
+                <h3 class="bold"><?= $arr["maker"] ?><!-- (メーカー) --> <?= $arr["model_name"] ?><!-- (車種名) --></h3>
                 <div class="car_info">
                     <dl>
                         <dt class="back_gray center">年式</dt>
-                        <dd><?= $arr["model_year"] ?>(年式)</dd>
+                        <dd><?= $arr["model_year"] ?><!-- (年式) -->年</dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">走行量</dt>
-                        <dd><?= $arr["car_mileage"] ?>(走行量)</dd>
+                        <dd><?= $arr["car_mileage"] ?><!-- (走行量) -->km</dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">排気量</dt>
-                        <dd><?= $arr["displacement"] ?>(排気量)</dd>
+                        <dd><?= $arr["displacement"] ?><!-- (排気量) -->cc</dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">車検</dt>
-                        <dd><?= $arr["car_check"] ?>(車検)</dd>
+                        <dd><?= $arr["car_history"] ?><!-- (車検) -->車</dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">修復歴</dt>
-                        <dd><?= $arr["repair_history"] ?>(修復歴)</dd>
+                        <dd><?= $arr["repair_history"] ?><!-- (修復歴) --></dd>
                     </dl>
                 </div>
 
@@ -95,11 +95,11 @@
                 <div class="auction_info">
                     <dl class="font_pink">
                         <dt class="postit_pink">開始価格</dt>
-                        <dd class="bold"><span class="big center"><?= $arr["money"] ?>(価格)</span>万円</dd>
+                        <dd class="bold"><span class="big center"><?= $arr["money"] ?><!-- (価格) --></span>万円</dd>
                     </dl>
                     <dl>
                         <dt class="postit_gray">オークション予定日時</dt>
-                        <dd><?= $arr[""] ?>(開始日時)〜<?= $arr[""] ?>(開始日時+10分)</dd>
+                        <dd><?= $arr["start_date"] ?> <?= $arr["start_hour"] ?>時<?= $arr["start_min"] ?>分<!-- (開始日時) --> 〜 <?= $arr["start_date"] ?> <?= $arr["end_hour"] ?>時<?= $arr["end_min"]?>分<!-- (開始日時+10分) --></dd>
                     </dl>
                 </div>
                 </a>

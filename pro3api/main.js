@@ -87,8 +87,10 @@ app.get('/sample', function(req, res) {
       'car_history':put[aucCount]['car_history'],
       'repair_history':put[aucCount]['repair_history'],
       'start_date': startDate,
+      'start_hour': startHour,
       'start_min': buffMinutues,
-      'interval': auctionTime * 10
+      'end_hour':startHour,
+      'end_min':buffMinutues + 10
   });
 });
 
