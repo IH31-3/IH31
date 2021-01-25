@@ -11,62 +11,52 @@
             <!-- <p class="after">オークション終了</p> -->
             <!--開始後-->
         </div>
-
-            <!-- {
-                "vehicle_no":1,
-                "model_name":"NSX",
-                "maker":"ホンダ",
-                "money":1800,
-                "model_year":2019,
-                "displacement":3500,
-                "car_history":"自家用",
-                "repair_history":"有",
-                "start_date":"2020/01/01",
-                "start_min":35,
-                "interval":10 
-            }-->
-
+       
+        <!-- 繰り返し要素 -->
+        <a href="http://127.0.0.1/IH31/customer/index.php?page=auction_top">
         <section class="car_sumnail">
             <div class="left_content">
                 <img src="./img/sample_car.png">
             </div>
             <div class="right_content">
-                <h3 class="bold">HONDA MSX</h3>
+                <h3 class="bold"><?= $arr["maker"] ?><!-- (メーカー) --> <?= $arr["model_name"] ?><!-- (車種名) --></h3>
                 <div class="car_info">
                     <dl>
                         <dt class="back_gray center">年式</dt>
-                        <dd>2013製</dd>
+                        <dd><?= $arr["model_year"] ?><!-- (年式) -->年</dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">走行量</dt>
-                        <dd>1万km未満</dd>
+                        <dd><?= $arr["car_mileage"] ?><!-- (走行量) -->km</dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">排気量</dt>
-                        <dd>1500cc</dd>
+                        <dd><?= $arr["displacement"] ?><!-- (排気量) -->cc</dd>
                     </dl>
                     <dl>
-                        <dt class="back_gray center">車検</dt>
-                        <dd>済み</dd>
+                        <dt class="back_gray center">車歴</dt>
+                        <dd><?= $arr["car_history"] ?><!-- (車検) -->車</dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">修復歴</dt>
-                        <dd>なし</dd>
+                        <dd><?= $arr["repair_history"] ?><!-- (修復歴) --></dd>
                     </dl>
                 </div>
 
                 <div class="auction_info">
                     <dl class="font_pink">
                         <dt class="postit_pink">開始価格</dt>
-                        <dd class="bold"><span class="big center">1800</span>万円</dd>
+                        <dd class="bold"><span class="big center"><?= $arr["money"] ?><!-- (価格) --></span>万円</dd>
                     </dl>
                     <dl>
                         <dt class="postit_gray">オークション予定日時</dt>
-                        <dd>01/19 14:00 〜 01/19 14:50</dd>
+                        <dd>開始：<?= $arr["start_date"] ?> <?= $arr["start_hour"] ?>時<?= $arr["start_min"] ?>分<!-- (開始日時) --><br>
+                        終了：<?= $arr["start_date"] ?> <?= $arr["end_hour"] ?>時<?= $arr["end_min"]?>分<!-- (開始日時+10分) --></dd>
                     </dl>
                 </div>
-
         </section>
+        </a>
+        <!-- ここまで繰り返し要素 -->
         <div class="buttons">
             <p class="btn1"><a class=" view_center" href="<?= $auction_bid_url ?>"><span class="padding_img"><img src="./img/auction.png" width="20px"></span>このオークションに参加する</a></p>
             <!--開催中-->

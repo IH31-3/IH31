@@ -82,6 +82,7 @@ app.get('/sample', function(req, res) {
       'model_name':put[aucCount]['model_name'],
       'maker':put[aucCount]['maker'],
       'money':startMoney,
+      'mileage':put[aucCount]['mileage'],
       'model_year':put[aucCount]['model_year'],
       'displacement':put[aucCount]['displacement'],
       'car_history':put[aucCount]['car_history'],
