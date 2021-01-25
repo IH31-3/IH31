@@ -24,11 +24,17 @@ function load_page_source() {
 // ---------- 登録 ---------- //
 // ----- 出品登録 -----
 function search_auction() {
-    $result = [
-        "auction1" => "春季開催！春のセール",
-        "auction2" => "夏季開催！夏のセール",
-    ];
+    $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
+    mysqli_set_charset($cn, 'utf8');
+    $sql = "SELECT * FROM auction;";
+    $sql_result = mysqli_query($cn, $sql);
+    mysqli_close($cn);
 
+    $result = [];
+
+    while ($row = mysqli_fetch_assoc($sql_result)) {
+        $result[] = $row;
+    }
     return $result;
 }
 
@@ -310,7 +316,17 @@ function regist_auction() {
     // db接続sql実行してください。
     $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
     mysqli_set_charset($cn, 'utf8');
-    $sql = "INSERT INTO auction(auction_no,date,explanation,auction_name)VALUES(" . $auction_id . ",'" . $auction_date . "','" . $auction_description . "','" . $auction_name . "');";
+    $sql = "INSERT INTO auction(
+                auction_no,
+                date,
+                explanation,
+                auction_name
+            )select
+                max(auction_no)+1,
+                '" . $auction_date . "',
+                '" . $auction_description . "',
+                '" . $auction_name . "'
+            from auction;";
     mysqli_query($cn, $sql);
     mysqli_close($cn);
 

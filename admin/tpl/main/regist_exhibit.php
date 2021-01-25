@@ -11,8 +11,8 @@
             <li class="box_li">オークション</li>
             <li class="input_li">
             <select name="auction_id">
-                <?php foreach($result as $key => $column): ?>
-                    <option value= <?= $key ?>><?= $column ?></option>
+                <?php foreach($result as $column): ?>
+                    <option value="<?= $column["auction_no"] ?>"><?= $column["auction_name"] ?></option>
                 <?php endforeach ?>
             </select>
             </li>
