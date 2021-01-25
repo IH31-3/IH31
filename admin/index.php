@@ -21,6 +21,10 @@ if(isset($_GET["page"])){
         $result = search_auction();
     }
 
+    if($page=="regist_matter"){
+        $result = search_employee();
+    }
+
     // ---------- 案件検索 ----------
     // 案件検索表示
     if($page=="matter_top"){
