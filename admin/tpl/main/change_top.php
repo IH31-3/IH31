@@ -3,13 +3,13 @@
     <form action="" method="get">
     <div class="search_columns">
         <ul>
-            <li class="long_li"><button type="submit" name="page" value="change_car"><?= "車両検索" ?></button></li>
+            <li class="long_li"><button type="submit" name="page" value="change_car"><?= "車両管理" ?></button></li>
         </ul>
         <ul>
-            <li class="long_li"><button type="submit" name="page" value="change_sales"><?= "売上検索" ?></button></li>
+            <li class="long_li"><button type="submit" name="page" value="change_sales"><?= "売上管理" ?></button></li>
         </ul>
         <ul>
-            <li class="long_li"><button type="submit" name="page" value="change_customer"><?= "顧客検索" ?></button></li>
+            <li class="long_li"><button type="submit" name="page" value="change_customer"><?= "顧客管理" ?></button></li>
         </ul>
         <ul>
             <li class="long_li"><button type="submit" name="page" value="change_auction"><?= "オークション管理" ?></button></li>

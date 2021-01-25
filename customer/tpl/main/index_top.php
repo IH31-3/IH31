@@ -52,7 +52,7 @@
         <a href="http://127.0.0.1/IH31/customer/index.php?page=auction_top">
         <section class="car_sumnail">
             <div class="left_content">
-                <img src="./img/sample_car.png">
+                <img src="../pro3api/public/car_img/<?= $arr["vehicle_no"] . '_0'; ?>.jpg">
             </div>
             <div class="right_content">
                 <h3 class="bold"><?= $arr["maker"] ?><!-- (メーカー) --> <?= $arr["model_name"] ?><!-- (車種名) --></h3>
