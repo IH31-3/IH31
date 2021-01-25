@@ -97,7 +97,6 @@ LEFT OUTER JOIN listing l ON a.auction_no = l.auction_no GROUP BY a.auction_no";
         $result[] = $row;
     }
     return $result;
-    //var_dump($result);
 }
 
 function change_auction_detail($id) {
@@ -105,20 +104,18 @@ function change_auction_detail($id) {
     // db接続sql実行してください。
     $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
     mysqli_set_charset($cn, 'utf8');
-    $sql = "SELECT l.listing_no,l.vehicle_no,lh.client_no,ifnull(max(lh.money), 0)as 'money' FROM listing l 
-LEFT OUTER JOIN listing_history lh ON l.listing_no = lh.listing_no 
-INNER JOIN vehicle v ON l.vehicle_no = v.vehicle_no 
-WHERE l.auction_no = " . $id . "
-GROUP BY lh.listing_no;";
+    $sql = "SELECT l.listing_no,l.vehicle_no,lx.client_no,client.client_name,lh.money FROM listing l
+    LEFT OUTER JOIN (SELECT listing_no,MAX(money)as 'money' FROM listing_history GROUP BY listing_no) lh ON l.listing_no = lh.listing_no
+    LEFT OUTER JOIN listing_history lx  ON lh.money = lx.money
+    LEFT OUTER JOIN client ON lx.client_no = client.client_no
+    WHERE l.auction_no = " . $id . ";";
     $sql_result = mysqli_query($cn, $sql);
     mysqli_close($cn);
-
     $result = [];
     while ($row = mysqli_fetch_assoc($sql_result)) {
         $result[] = $row;
     }
     return $result;
-    //var_dump($sql);
 }
 
 // --------------- 登録系 --------------- //
@@ -203,7 +200,6 @@ function regist_car() {
     '" . $car_airbag . "','" . $car_history . "','" . $car_type_no . "','" . $car_repair_history . "','" . $car_evaluation_point . "','" . $car_outer_point . "','" . $car_inner_point . "','" . $car_wholesale . "','" . $car_status_comment . "','" . $car_appeal_comment . "');";
     mysqli_query($cn, $sql);
     mysqli_close($cn);
-    // var_dump($sql);
 
     $result = [
         "<p><img src='../pro3api/public/car_img/" . $car_no . "_0.jpg' height='250', width='250'></p>",
@@ -259,7 +255,6 @@ function regist_exhibit() {
         '" . $car_id . "',
         '" . $auction_id . "'
     from listing;";
-    var_dump($sql);
     mysqli_query($cn, $sql);
     mysqli_close($cn);
 
@@ -301,8 +296,6 @@ function regist_matter() {
 
     mysqli_query($cn, $sql);
     mysqli_close($cn);
-
-    // Var_dump($sql);
 
     $result = [
         $matter_id,

@@ -41,7 +41,6 @@ if(isset($_GET["page"])){
     if($page=="change_auction_detail"){
         $id = $_GET["id"];
         $result = change_auction_detail($id);
-        var_dump($result);
     }
 
 
