@@ -702,4 +702,40 @@ main .search_columns .box_li {
     /* background-color: rgba(255,0,0, 0.2); */
 }
 
+/********************************* オークション情報詳細 *********************************/
+/********************** オークション詳細一覧 **********************/
 
+.change_auction_detail h2:nth-child(3) {
+    margin-top: 30px;
+}
+.change_auction_detail .loop_columns {
+    margin-top: 30px;
+    width: calc(144px * 5);
+    /* border: solid #808080 1px; */
+    border-top: solid #42A382 8px;
+
+}
+.change_auction_detail .loop_columns ul{
+    list-style: none;
+    display: table;
+    border-right: solid #808080 1px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+.change_auction_detail .loop_columns ul:nth-child(1){
+    list-style: none;
+    display: table;
+    height: 10px;
+    /* background-color: rgba(255,0,0, 0.2); */
+}
+
+.change_auction_detail .loop_columns li {
+    display: table-cell;
+    text-align: center;
+    width: 144px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: solid #808080 1px;
+    border-left: solid #808080 1px;
+
+    /* background-color: rgba(255,0,0, 0.2); */
+}
