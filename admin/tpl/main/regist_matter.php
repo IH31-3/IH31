@@ -23,7 +23,7 @@
         </ul>
         <ul>
             <li class="box_li">金額</li>
-            <li class="input_li"><input type="text" name="car_price"  value="<?= $_GET["money"] ?>">万円</li>
+            <li class="input_li">¥<input type="text" name="car_price"  value="<?= $_GET["money"] ?>">万円</li>
         </ul>
         <!-- <ul>
             <li class="box_li">ステータス</li>
