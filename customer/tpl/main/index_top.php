@@ -75,14 +75,14 @@
                     </dl>
                     <dl>
                         <dt class="back_gray center">走行量</dt>
-                        <dd><?= $arr["car_mileage"] ?><!-- (走行量) -->km</dd>
+                        <dd><?= $arr["mileage"] ?><!-- (走行量) -->km</dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">排気量</dt>
                         <dd><?= $arr["displacement"] ?><!-- (排気量) -->cc</dd>
                     </dl>
                     <dl>
-                        <dt class="back_gray center">車検</dt>
+                        <dt class="back_gray center">車歴</dt>
                         <dd><?= $arr["car_history"] ?><!-- (車検) -->車</dd>
                     </dl>
                     <dl>
@@ -99,7 +99,8 @@
                     </dl>
                     <dl>
                         <dt class="postit_gray">オークション予定日時</dt>
-                        <dd><?= $arr["start_date"] ?> <?= $arr["start_hour"] ?>時<?= $arr["start_min"] ?>分<!-- (開始日時) --> 〜 <?= $arr["start_date"] ?> <?= $arr["end_hour"] ?>時<?= $arr["end_min"]?>分<!-- (開始日時+10分) --></dd>
+                        <dd>開始：<?= $arr["start_date"] ?> <?= $arr["start_hour"] ?>時<?= $arr["start_min"] ?>分<!-- (開始日時) --><br>
+                        終了：<?= $arr["start_date"] ?> <?= $arr["end_hour"] ?>時<?= $arr["end_min"]?>分<!-- (開始日時+10分) --></dd>
                     </dl>
                 </div>
                 </a>
@@ -110,6 +111,6 @@
 
     </article>
 
-    <a href="http://127.0.0.1/IH31/customer/index.php?page=index_top">トップへ戻る</a>
+    <!-- <a href="http://127.0.0.1/IH31/customer/index.php?page=index_top">トップへ戻る</a> -->
 </main>
 <!-- main ここまで -->

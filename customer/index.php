@@ -10,11 +10,11 @@ if(!isset($_SESSION['user_id'])){
 $url = "http://localhost:9000/sample";
 $json = file_get_contents($url);
 $arr = json_decode($json,true);
-if($arr["start_min"] + 10 > 60){
-    echo "hoge";
+
+// 開始分刻が50より大きい場合、終了時刻を+1、終了分刻を-60+10する
+if($arr["start_min"] + 10 >= 60){
     $arr["end_hour"] = $arr["start_hour"] + 1;
     $arr["end_min"] = $arr["start_min"] - 60 + 10;
-    echo $arr["end_hour"];
 }
 
 // 関数ファイル読み込み
@@ -31,6 +31,26 @@ $footer = "tpl/footer/customerFooter.php";
 
 if(isset($_GET["page"])){ // ----- ページ遷移用
     $page = $_GET["page"];
+
+    if($page=="index_top"){
+        $url = "http://localhost:9000/sample";
+        $json = file_get_contents($url);
+        $arr = json_decode($json,true);
+        // var_dump($arr);
+
+        // array(8) {
+        //     ["vehicle_no"]=> int(1) 
+        //     ["model_name"]=> string(3) "NSX" 
+        //     ["maker"]=> string(9) "ホンダ" 
+        //     ["money"]=> int(1800) 
+        //     ["model_year"]=> int(2019) 
+        //     ["displacement"]=> int(3500) 
+        //     ["car_history"]=> string(9) "自家用" 
+        //     ["repair_history"]=> string(3) "有" 
+        // }
+
+
+    }
 
     // オークション一覧表示
     if($page=="auction_top"){
