@@ -22,7 +22,7 @@
                     <li><?= $column["vehicle_no"] ?></li>
                     <li><?= $column["client_name"] ?>様</li>
                     <li><?= $column["money"] ?>万円</li>
-                    <li><a href="http://127.0.0.1/IH31/admin/index.php?page=regist_matter&l_no=&v_no=&c_no=&mo=&">案件作成</a></li>
+                    <li><a href="http://127.0.0.1/IH31/admin/index.php?page=regist_matter&vehicle_no=<?= $column["vehicle_no"] ?>&client_no=<?= $column["client_no"] ?>&money=<?= $column["money"] ?>">案件作成</a></li>
                 <?php } ?>
             </ul>
         <?php endforeach ?>

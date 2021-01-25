@@ -80,6 +80,21 @@ function search_matter_detail($id) {
     return $result;
 }
 
+// ----- 従業員検索 -----
+function search_employee(){
+    $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
+    mysqli_set_charset($cn, 'utf8');
+    $sql = "SELECT * FROM employee";
+    $sql_result = mysqli_query($cn, $sql);
+    mysqli_close($cn);
+
+    $result = [];
+    while ($row = mysqli_fetch_assoc($sql_result)) {
+        $result[] = $row;
+    }
+    return $result;
+}
+
 // ---------- 変更・管理 ---------- //
 function change_auction() {
     $date = date("Y/m/d ");
@@ -272,12 +287,10 @@ function regist_matter() {
     $employee_id = $_POST["employee_id"];
     $car_id = $_POST["car_id"];
     $car_price = $_POST["car_price"];
-    $car_status = $_POST["car_status"];
 
     // db接続sql実行してください。
     $cn = mysqli_connect(HOSTNAME, MYSQL_USER, MYSQL_PASS, DB_NAME);
     mysqli_set_charset($cn, 'utf8');
-    // $sql = "INSERT INTO matter(matter_no,status,client_no,employee_no,vehicle_no,mone)VALUES('" . $customer_id . "','" . $employee_id . "','" . $car_id . "','" . $car_price . "','" . $car_status . "');";
     $sql = "INSERT INTO matter(
                 matter_no,
                 status,
@@ -287,23 +300,21 @@ function regist_matter() {
                 money
             )select 
                 max(matter_no)+1,
+                '1',
                 '" . $customer_id . "',
                 '" . $employee_id . "',
                 '" . $car_id . "',
-                '" . $car_price . "',
-                '" . $car_status . "'
+                '" . $car_price . "'
             from matter;";
 
     mysqli_query($cn, $sql);
     mysqli_close($cn);
 
     $result = [
-        $matter_id,
         $customer_id,
         $employee_id,
         $car_id,
         $car_price,
-        $car_status,
     ];
     return $result;
 }

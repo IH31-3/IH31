@@ -5,24 +5,30 @@
     <div class="search_columns">
         <ul>
             <li class="box_li">顧客id</li>
-            <li class="input_li"><input type="text" name="customer_id"></li>
-        </ul>
-        <ul>
-            <li class="box_li">担当従業員id</li>
-            <li class="input_li"><input type="text" name="employee_id"></li>
+            <li class="input_li"><input type="text" name="customer_id" value="<?= $_GET["client_no"] ?>"></li>
         </ul>
         <ul>
             <li class="box_li">車両番号</li>
-            <li class="input_li"><input type="text" name="car_id"></li>
+            <li class="input_li"><input type="text" name="car_id"  value="<?= $_GET["vehicle_no"] ?>"></li>
+        </ul>
+        <ul>
+            <li class="box_li">担当従業員</li>
+            <li class="input_li">
+                <select name="employee_id">
+                    <?php foreach( $result as $column): ?>
+                    <option value="<?= $column["employee_no"] ?>"><?= $column["employee_no"] . "：" . $column["employee_name"] ?></option>
+                    <?php endforeach ?>
+                </select>
+            </li>
         </ul>
         <ul>
             <li class="box_li">金額</li>
-            <li class="input_li"><input type="text" name="car_price"></li>
+            <li class="input_li"><input type="text" name="car_price"  value="<?= $_GET["money"] ?>">万円</li>
         </ul>
-        <ul>
+        <!-- <ul>
             <li class="box_li">ステータス</li>
             <li class="input_li"><input type="text" name="car_status"></li>
-        </ul>
+        </ul> -->
         <ul>
             <li class="long_li"><button type="submit" name="page" value="done">登録する</button></li>
         </ul>
