@@ -6,6 +6,17 @@ if(!isset($_SESSION['user_id'])){
     // ログイン中のユーザーIDとして001を保持
     $_SESSION['user_id'] = "001";
 }
+
+$url = "http://localhost:9000/sample";
+$json = file_get_contents($url);
+$arr = json_decode($json,true);
+if($arr["start_min"] + 10 > 60){
+    echo "hoge";
+    $arr["end_hour"] = $arr["start_hour"] + 1;
+    $arr["end_min"] = $arr["start_min"] - 60 + 10;
+    echo $arr["end_hour"];
+}
+
 // 関数ファイル読み込み
 require_once("../functions/customer/functions.php");
 
