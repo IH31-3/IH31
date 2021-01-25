@@ -6,14 +6,13 @@
         <div class="status">
             <!-- <p class="before">あと（時間）でオークション開始</p> -->
             <!--開始前-->
-            <p class="now">あと（時間）でオークション終了</p>
+            <p class="now"><?= $arr["end_hour"] ?>時<?= $arr["end_min"]?>分にオークション終了</p>
             <!--開始中-->
             <!-- <p class="after">オークション終了</p> -->
             <!--開始後-->
         </div>
        
         <!-- 繰り返し要素 -->
-        <a href="http://127.0.0.1/IH31/customer/index.php?page=auction_top">
         <section class="car_sumnail">
             <div class="left_content">
                 <img src="./img/sample_car.png">
@@ -27,7 +26,7 @@
                     </dl>
                     <dl>
                         <dt class="back_gray center">走行量</dt>
-                        <dd><?= $arr["car_mileage"] ?><!-- (走行量) -->km</dd>
+                        <dd><?= $arr["mileage"] ?><!-- (走行量) -->km</dd>
                     </dl>
                     <dl>
                         <dt class="back_gray center">排気量</dt>
@@ -55,15 +54,18 @@
                     </dl>
                 </div>
         </section>
-        </a>
         <!-- ここまで繰り返し要素 -->
+        
         <div class="buttons">
-            <p class="btn1"><a class=" view_center" href="<?= $auction_bid_url ?>"><span class="padding_img"><img src="./img/auction.png" width="20px"></span>このオークションに参加する</a></p>
+            <a class=" view_center" href="<?= $auction_bid_url ?>">
+                <p class="btn1"><span class="padding_img"><img src="./img/auction.png" width="20px"></span>このオークションに参加する</p>
+            </a>
             <!--開催中-->
 
             <!-- <p class="btn2"><span class="padding_img"><img src="./img/auction.png" width="20px"></span> このオークションに参加する</p> -->
             <!--開催中以外-->
         </div>
+        
 
 
     </article>

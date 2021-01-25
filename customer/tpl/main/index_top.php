@@ -49,23 +49,11 @@
         <h2 class="left border_bottom"><span class="back_pink">THIS WEEK</span>　　　<span class="font_gray font_size_middle">AUCTION LINEUP</span> <span class="pink_font"></span></h2>
 
         <!-- 繰り返し要素 -->
+        <a href="http://127.0.0.1/IH31/customer/index.php?page=auction_top">
         <section class="car_sumnail">
             <div class="left_content">
                 <img src="./img/sample_car.png">
             </div>
-            <!-- {
-                "vehicle_no":1,
-                "model_name":"NSX",
-                "maker":"ホンダ",
-                "money":1800,
-                "model_year":2019,
-                "displacement":3500,
-                "car_history":"自家用",
-                "repair_history":"有",
-                "start_date":"2020/01/01",
-                "start_min":35,
-                "interval":10 
-            }-->
             <div class="right_content">
                 <h3 class="bold"><?= $arr["maker"] ?><!-- (メーカー) --> <?= $arr["model_name"] ?><!-- (車種名) --></h3>
                 <div class="car_info">
@@ -91,7 +79,6 @@
                     </dl>
                 </div>
 
-                <a href="http://127.0.0.1/IH31/customer/index.php?page=auction_top">
                 <div class="auction_info">
                     <dl class="font_pink">
                         <dt class="postit_pink">開始価格</dt>
@@ -103,9 +90,8 @@
                         終了：<?= $arr["start_date"] ?> <?= $arr["end_hour"] ?>時<?= $arr["end_min"]?>分<!-- (開始日時+10分) --></dd>
                     </dl>
                 </div>
-                </a>
-
         </section>
+        </a>
 
         <!-- ここまで繰り返し要素 -->
 
