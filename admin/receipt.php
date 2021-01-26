@@ -20,38 +20,38 @@
 
 <body>
     <div id="wrapper">
-        <h1 class="big center mgn_top mgn_bottom">請求書</h1>
+        <h1 class="big center mgn_top mgn_bottom">領収書</h1>
 
         <div class="flex">
-            <p class="left middle"><span class="border_bottom">(利用者)</span> 御中</p>
+            <p class="left middle"><span class="border_bottom"><?= $_GET["client_name"] ?></span> 御中</p>
             <div class="right">
                 <p class="middle">No. 121<br>
-                    発行日 2021/01/15</p>
+                    発行日 2021/01/26</p>
             </div>
         </div>
 
+        <p class="amount center">合計金額　¥ <?= $_GET["money"] + 2 ?>0,000 -</p>
 
-
-        <p class="center middle mgn">下記の通り引き落としを行います</p>
-
-        <div id="tables" class="flex">
-            <table class="table1">
+        <p class="center middle mgn">但し　車両代として<br>
+            上記正に領収いたしました。</p>
+        
+            <div id="tables" class="flex">
+            <table>
                 <tr class="border_bottom">
                     <td>内訳</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>車両金額</td>
-                    <td>¥1,000,000</td>
-
+                    <td>¥<?= $_GET["money"] ?>0,000 -</td>
+                </tr>
+                <tr>
+                    <td>手数料</td>
+                    <td>¥10,000 -</td>
                 </tr>
                 <tr>
                     <td>運送料</td>
-                    <td>¥10,000</td>
-                </tr>
-                <tr>
-                    <td>合計</td>
-                    <td>¥1,010,000</td>
+                    <td>¥10,000 -</td>
                 </tr>
             </table>
 
@@ -69,17 +69,12 @@
                 </tr>
             </table>
 
-
+            
         </div>
-        <dl>
-            <dt class="middle border_bottom">引落先</dt>
-            <dd>大阪銀行　道頓堀支店<br>
-                (普)1239494043
-            </dd><br>
 
-            <dt class="middle border_bottom">引落日</dt>
-            <dd>2021/02/03</dd>
-        </dl>
+        <p id="revenue"><img src="./img/revenue.png"></p>
+
+
         <hr>
 
         <p class="frame">※A4用紙縦向きで印刷し、下部の余白部分は切り取って使用ください。</p>

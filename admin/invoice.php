@@ -23,10 +23,10 @@
         <h1 class="big center mgn_top mgn_bottom">請求書</h1>
 
         <div class="flex">
-            <p class="left middle"><span class="border_bottom">(利用者)</span> 御中</p>
+            <p class="left middle"><span class="border_bottom"><?= $_GET["client_name"] ?></span> 御中</p>
             <div class="right">
                 <p class="middle">No. 121<br>
-                    発行日 2021/01/15</p>
+                    発行日 2021/01/26</p>
             </div>
         </div>
 
@@ -42,16 +42,20 @@
                 </tr>
                 <tr>
                     <td>車両金額</td>
-                    <td>¥1,000,000</td>
+                    <td>¥<?= $_GET["money"] ?>0,000 -</td>
 
                 </tr>
                 <tr>
+                    <td>手数料</td>
+                    <td>¥10,000 -</td>
+                </tr>
+                <tr>
                     <td>運送料</td>
-                    <td>¥10,000</td>
+                    <td>¥10,000 -</td>
                 </tr>
                 <tr>
                     <td>合計</td>
-                    <td>¥1,010,000</td>
+                    <td>¥<?= $_GET["money"] + 2 ?>0,000 -</td>
                 </tr>
             </table>
 

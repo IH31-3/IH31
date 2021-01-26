@@ -39,7 +39,7 @@
         <li><?= "金額" ?></li><li><?= $result[0]['money'] ?></li>
     </ul>
     <ul>
-        <li><?= "状態" ?></li><li><?= $result[0]['status'] ?></li>
+        <li><?= "状態" ?></li><li><!-- <?= $result[0]['status'] ?> -->入金待ち</li>
     </ul>
     <ul>
         <li><?= "車両番号" ?></li><li><?= $result[0]['vehicle_no'] ?></li>
@@ -128,11 +128,13 @@
     <ul>
     </ul>
 </div>
-<ul>
-    <li><a href="">督促状態を更新</a></li>
-    <li><a href="">領収書印刷</a></li>
-    <li><a href="">請求書印刷</a></li>
-    <li><a href="">この案件をキャンセル</a></li>
-    <li><a href="http://127.0.0.1/IH31/admin/index.php?page=matter_top">案件検索へ戻る</a></li>
-</ul>
+<div class="search_columns">
+    <ul>
+        <li class="long_li"><a href="http://127.0.0.1/IH31/admin/invoice.php?client_name=<?= $result[0]['client_name'] ?>&money=<?= $result[0]['money'] ?>" class="button"><?= "請求書印刷" ?></a></li>
+    </ul>
+    <ul>
+        <li class="long_li"><a href="http://127.0.0.1/IH31/admin/receipt.php?client_name=<?= $result[0]['client_name'] ?>&money=<?= $result[0]['money'] ?>" class="button"><?= "領収書印刷" ?></a></li>
+    </ul>
+</div>
+
 </main>
