@@ -23,14 +23,14 @@
         <h1 class="big center mgn_top mgn_bottom">領収書</h1>
 
         <div class="flex">
-            <p class="left middle"><span class="border_bottom">(利用者)</span> 御中</p>
+            <p class="left middle"><span class="border_bottom"><?= $_GET["client_name"] ?></span> 御中</p>
             <div class="right">
                 <p class="middle">No. 121<br>
-                    発行日 2021/01/15</p>
+                    発行日 2021/01/26</p>
             </div>
         </div>
 
-        <p class="amount center">合計金額 ¥(金額)-</p>
+        <p class="amount center">合計金額　¥ <?= $_GET["money"] + 2 ?>0,000 -</p>
 
         <p class="center middle mgn">但し　車両代として<br>
             上記正に領収いたしました。</p>
@@ -43,19 +43,15 @@
                 </tr>
                 <tr>
                     <td>車両金額</td>
-                    <td>¥1,000,000</td>
+                    <td>¥<?= $_GET["money"] ?>0,000 -</td>
                 </tr>
                 <tr>
                     <td>手数料</td>
-                    <td>¥100,000</td>
+                    <td>¥10,000 -</td>
                 </tr>
                 <tr>
                     <td>運送料</td>
-                    <td>¥10,000</td>
-                </tr>
-                <tr>
-                    <td>合計</td>
-                    <td>¥1,110,000</td>
+                    <td>¥10,000 -</td>
                 </tr>
             </table>
 
