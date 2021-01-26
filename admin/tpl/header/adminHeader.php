@@ -24,11 +24,10 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([ //グラフデータの指定
                 ['Task', 'Hours per Day'],
-                ['Work',     11],
-                ['Eat',      2],
-                ['Commute',  2],
-                ['Watch TV', 2],
-                ['Sleep',    7]
+                ['書類待ち',<?=$result[0][1]?>],
+                ['振込待ち',<?=$result[1][1]?>],
+                ['整備待ち',<?=$result[2][1]?>],
+                ['納車',<?=$result[3][1]?>],
             ]);
             var options = { //オプションの指定
                 pieSliceText: 'label',

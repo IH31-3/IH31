@@ -47,9 +47,18 @@ if(isset($_GET["page"])){
         $result = change_auction_detail($id);
     }
 
+    // ---------- 値取得 ----------
+    if($page == "index_top"){
+        $result = get_top_page();
+    }
+
 
     // --- 呼び出しmainページの変更
     $main = "tpl/main/" . $page . ".php";
+}
+    // ---------- トップページ処理 ----------
+else{
+    $result = get_top_page();
 }
 
 // ---------- 画面表示後入力処理 ---------- //

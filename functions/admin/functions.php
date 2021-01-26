@@ -351,3 +351,23 @@ function regist_auction() {
     ];
     return $result;
 }
+
+//トップページ　円グラフ用データ取得
+function get_top_page(){
+    $result = [];
+    $sql = "SELECT status,COUNT(matter_no) FROM matter GROUP BY status";
+
+    // db接続sql実行してください。
+    $cn = new mysqli(HOSTNAME,MYSQL_USER,MYSQL_PASS,DB_NAME);
+    if ($cn->connect_errno){
+        echo("Connect ERR");
+    }
+    $cn -> set_charset('utf8');
+    $stmt = $cn -> prepare($sql);
+    $stmt -> execute();
+    $stmt -> bind_result($status,$count);
+    for($i = 0 ; $stmt -> fetch();$i ++){
+        array_push($result,[$status,$count]);  
+    }
+    return $result;
+}
